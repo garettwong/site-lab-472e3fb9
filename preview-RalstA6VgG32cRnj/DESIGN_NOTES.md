@@ -60,3 +60,20 @@ Garett pointed out that the previous pass still felt like a western fast-food / 
 - reduced excessive border-radius from playful pills/cards into sharper 8–14px professional UI;
 - shifted palette away from cream/gold glow into navy, white, grey, and restrained jade;
 - made the visual tone more document-led, employment-agency, and trust/proof oriented.
+
+
+## Correction pass — 2026-07-06 01:45 CST
+
+Garett rejected the remaining western fast-food / playful rounded feeling and gave three direct requirements:
+
+1. stop using rounded corners;
+2. change visible language to Traditional Chinese;
+3. put the maid/helper photos directly into the design.
+
+Applied:
+
+- rewrote the page language to Traditional Chinese (`zh-Hant-HK`);
+- changed the design system to straight-corner, document-led HK employment-agency style;
+- made helper portraits visible in the hero roster, search cards, and detail page;
+- removed visible English UI copy except synthetic helper names/codes;
+- kept noindex/private/synthetic-data safety notes.

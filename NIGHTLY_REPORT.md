@@ -154,4 +154,55 @@ Correction applied:
 Verification after correction:
 
 - Local file marker check passed for `agency-consultation.webp`, 4 helper portrait assets, and `Professional correction pass` CSS marker.
-- Awaiting post-push live GitHub Pages verification below.
+
+## Watchdog correction verification — 2026-07-06 01:38 HKT
+
+The scheduled watchdog verified the professional correction pass is live and ready:
+
+Local/static:
+
+- Preview HTML exists: `preview-RalstA6VgG32cRnj/index.html`, 39,801 bytes.
+- Required markers present: `Sunny Helper Concierge`, `Professional correction pass`, `agency-consultation.webp`, `helper-ana.webp`, `helper-mara.webp`, `helper-lina.webp`, `helper-rhea.webp`, `live-updated-profiles`, `helper-self-update`, `noindex,nofollow,noarchive`.
+- Responsive/mobile markers present: `max-width:620px` and `prefers-reduced-motion`.
+- Secret/API-key pattern scan: 0 matches.
+- HK phone-number pattern scan: 0 matches.
+- Root decoy check: root page returns 404 marker + noindex and does not expose the preview slug.
+- `robots.txt`: `User-agent: *` / `Disallow: /`.
+- Local HTTP server check returned 200 for preview index, root decoy, robots, and professional correction assets.
+
+Live GitHub Pages:
+
+- Preview URL: HTTP 200, 39,413 bytes, `text/html; charset=utf-8`.
+- Live markers present: `Sunny Helper Concierge`, `Professional correction pass`, `agency-consultation.webp`, `helper-ana.webp`, `helper-mara.webp`, `helper-lina.webp`, `helper-rhea.webp`, `live-updated-profiles`, `helper-self-update`, `noindex,nofollow,noarchive`.
+- Live root URL: HTTP 200, 448 bytes, root 404/noindex decoy present, preview slug not exposed.
+- Live `robots.txt`: HTTP 200, `User-agent: *` / `Disallow: /`.
+- Live assets returned HTTP 200 with `image/webp`:
+  - `agency-consultation.webp`: 66,660 bytes
+  - `helper-ana.webp`: 14,710 bytes
+  - `helper-mara.webp`: 20,550 bytes
+  - `helper-lina.webp`: 27,712 bytes
+  - `helper-rhea.webp`: 29,688 bytes
+
+Git:
+
+- `HEAD`: `b07781b` (`feat: professionalize maid agency preview visuals`), matching `origin/main`.
+- No diff in tracked preview files after verification.
+- Remaining untracked local sprint/watchdog/audit files were left untouched.
+
+Final caveat remains: static prototype only; no real backend/search submit/payment/account/CRM action yet.
+
+
+## Correction pass — 2026-07-06 01:45 CST
+
+User instruction: stop using rounded corners, change language to Traditional Chinese, and put the maid/helper photos into the page.
+
+Applied and locally verified:
+
+- HTML language set to `zh-Hant-HK`.
+- Visible page copy rewritten into Traditional Chinese.
+- Global straight-corner rule: `border-radius:0!important`; no non-zero border-radius declarations found in local check.
+- Helper portraits appear in the hero roster, search cards, and detail page.
+- Local HTTP check returned 200 for the page and the five relevant WebP assets.
+- Secret-like scan found no API key/token/password/user email/phone patterns.
+
+Pending at this report line: push + live GitHub Pages verification.

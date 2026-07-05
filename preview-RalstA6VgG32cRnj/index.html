@@ -1,388 +1,169 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant-HK">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<meta name="description" content="Private noindex counter-copy prototype for a premium Hong Kong helper agency journey. Synthetic data only.">
-<title>Professional Helper Agency — Private Counter-Copy Preview</title>
+<meta name="description" content="香港僱傭中心網站方向示範。只使用合成外傭相片與虛構資料。">
+<title>專業僱傭中心示範｜外傭即時名冊</title>
 <style>
 :root{
-  --porcelain:#fbf8f0;
-  --paper:#fffdf7;
-  --linen:#efe5d2;
-  --ink:#14221f;
-  --soft-ink:#40504b;
-  --muted:#76817c;
-  --jade:#2f6759;
-  --jade-2:#1f4c42;
-  --gold:#b88a41;
-  --gold-2:#e0bf73;
-  --blush:#f3d6c6;
-  --mist:#edf4ee;
-  --line:rgba(37,58,52,.14);
-  --shadow:0 24px 70px rgba(45,42,30,.12);
-  --tight-shadow:0 14px 38px rgba(45,42,30,.12);
-  --radius:28px;
-  --radius-sm:18px;
-  --display:Georgia,"Times New Roman",serif;
-  --body:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans TC",sans-serif;
-  --mono:"SFMono-Regular","Roboto Mono",Consolas,monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;background:var(--porcelain)}
-body{
-  margin:0;
-  color:var(--ink);
-  font-family:var(--body);
-  background:
-    radial-gradient(circle at 12% 0%,rgba(243,214,198,.7) 0 18rem,transparent 24rem),
-    radial-gradient(circle at 92% 10%,rgba(224,191,115,.34) 0 18rem,transparent 26rem),
-    linear-gradient(180deg,#fffdf8 0%,#f6efe2 48%,#fbf8f0 100%);
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
-a{color:inherit;text-decoration:none}
-button,input,select{font:inherit}
-img{max-width:100%;display:block}
-.skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip:focus{left:16px;top:16px;width:auto;height:auto;background:var(--ink);color:#fff;padding:12px 16px;border-radius:12px;z-index:999}
-.privacy{
-  position:fixed;z-index:90;left:14px;bottom:14px;
-  background:#14221f;color:#fff;border:1px solid rgba(255,255,255,.12);
-  border-radius:999px;padding:9px 13px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-  box-shadow:0 12px 28px rgba(0,0,0,.18)
-}
-.shell{width:min(1180px,calc(100% - 28px));margin:0 auto}
-.topbar{
-  position:sticky;top:10px;z-index:80;margin:10px auto 0;
-  display:flex;align-items:center;justify-content:space-between;gap:14px;
-  padding:10px 10px 10px 14px;border:1px solid var(--line);border-radius:999px;
-  background:rgba(255,253,247,.94);box-shadow:0 10px 34px rgba(54,47,32,.09)
-}
-.brand{display:flex;align-items:center;gap:10px;min-width:0}
-.mark{
-  width:40px;height:40px;border-radius:14px;display:grid;place-items:center;flex:0 0 auto;
-  color:#fff;background:linear-gradient(135deg,var(--jade),var(--jade-2));font-weight:900;letter-spacing:-.04em;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)
-}
-.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
-.brand b{display:block;font-size:14px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:38vw}
-.nav{display:flex;align-items:center;gap:4px;overflow:auto;scrollbar-width:none}
-.nav::-webkit-scrollbar{display:none}
-.nav a{padding:10px 12px;border-radius:999px;font-size:12px;font-weight:760;color:#52615c;white-space:nowrap;transition:background .2s,color .2s,transform .2s}
-.nav a:hover,.nav a.active{background:var(--ink);color:#fff;transform:translateY(-1px)}
-.nav a.primary{background:var(--jade);color:#fff}
-.section{padding:78px 0;scroll-margin-top:92px}
-.hero{padding:48px 0 80px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(330px,.82fr);gap:36px;align-items:center;min-height:calc(100vh - 70px)}
-.eyebrow{display:flex;align-items:center;gap:9px;margin-bottom:18px;color:var(--jade);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
-.eyebrow:before{content:"";width:38px;height:1px;background:var(--gold)}
-h1,h2,h3,p{margin-top:0}
-h1{font-family:var(--display);font-size:clamp(3.1rem,8.7vw,7.8rem);line-height:.88;letter-spacing:-.065em;margin-bottom:24px;max-width:920px}
-h1 em{font-style:italic;color:var(--jade);letter-spacing:-.055em}
-.lead{font-size:clamp(1.05rem,2vw,1.28rem);line-height:1.65;color:var(--soft-ink);max-width:680px;margin-bottom:28px}
-.hero-proof{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 30px}
-.proof-pill{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 13px;box-shadow:0 9px 24px rgba(58,49,34,.06);font-size:13px;color:#44544f;font-weight:720}
-.dot{width:8px;height:8px;border-radius:999px;background:var(--jade);box-shadow:0 0 0 5px rgba(47,103,89,.1)}
-.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.btn{border:0;border-radius:999px;background:var(--ink);color:#fff;padding:14px 20px;font-weight:850;box-shadow:0 12px 30px rgba(20,34,31,.18);display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;min-height:48px;transition:transform .2s,box-shadow .2s,background .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(20,34,31,.22)}
-.btn.jade{background:var(--jade)}
-.btn.light{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 10px 26px rgba(45,42,30,.08)}
-.hero-card{position:relative}
-.photo-frame{position:relative;border-radius:38px;overflow:hidden;background:#eadcc5;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.78)}
-.photo-frame img{width:100%;aspect-ratio:4/5.35;object-fit:cover;object-position:center}
-.photo-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0) 48%,rgba(20,34,31,.58) 100%)}
-.compass-card{
-  position:absolute;left:-26px;right:20px;bottom:22px;background:#fffdf7;color:var(--ink);
-  border-radius:26px;padding:18px;border:1px solid rgba(255,255,255,.72);box-shadow:0 18px 48px rgba(32,27,16,.18)
-}
-.compass-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
-.compass-top strong{font-family:var(--display);font-size:22px;letter-spacing:-.035em}.compass-top span{font:700 11px var(--mono);color:var(--jade);letter-spacing:.08em;text-transform:uppercase}
-.compass-line{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.compass-line div{border:1px solid var(--line);border-radius:16px;padding:10px 8px;background:#fbf8f0;min-height:74px}
-.compass-line b{display:block;font-size:11px;margin-bottom:5px}.compass-line small{display:block;color:var(--muted);font-size:10px;line-height:1.35}
-.section-head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(260px,.42fr);gap:28px;align-items:end;margin-bottom:28px}
-.kicker{color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
-h2{font-family:var(--display);font-size:clamp(2rem,4.8vw,4.45rem);line-height:.96;letter-spacing:-.055em;margin-bottom:12px}.section-head p,.section-intro{color:var(--soft-ink);line-height:1.65;font-size:1.02rem}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.trust-card,.panel,.helper-card,.field,.admin-card,.profile-sheet,.route-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 12px 34px rgba(52,46,32,.075)}
-.trust-card{padding:22px;min-height:210px}.icon{width:46px;height:46px;border-radius:18px;background:var(--mist);display:grid;place-items:center;color:var(--jade);font-size:21px;margin-bottom:18px}.trust-card h3,.panel h3,.admin-card h3,.helper-card h3{font-size:1.04rem;margin-bottom:8px;letter-spacing:-.015em}.trust-card p,.panel p,.admin-card p,.helper-card p{color:var(--muted);line-height:1.55;font-size:.94rem;margin-bottom:0}.trust-card b{display:block;margin-top:16px;color:var(--jade);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
-.journey{position:relative;background:linear-gradient(135deg,#162621,#2f6759);color:#fff;border-radius:38px;padding:34px;overflow:hidden;box-shadow:var(--shadow)}
-.journey:before{content:"";position:absolute;inset:auto -8% -28% auto;width:48%;height:90%;border-radius:999px;background:rgba(224,191,115,.16);filter:blur(0)}
-.journey .section-head{grid-template-columns:1fr .45fr;position:relative;z-index:1}.journey .kicker{color:var(--gold-2)}.journey h2{color:#fff}.journey .section-head p{color:rgba(255,255,255,.74)}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;position:relative;z-index:1}.step{background:rgba(255,253,247,.08);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:17px;min-height:154px}.step span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:999px;background:#fff;color:var(--jade);font-weight:900;margin-bottom:18px}.step h3{margin-bottom:8px;color:#fff;font-size:.98rem}.step p{color:rgba(255,255,255,.72);line-height:1.45;font-size:.88rem;margin-bottom:0}
-.search-stage{display:grid;grid-template-columns:.86fr 1.14fr;gap:22px;align-items:start}.search-console{background:#fff;border:1px solid var(--line);border-radius:34px;padding:24px;box-shadow:var(--shadow);position:sticky;top:100px}.search-console h3{font-family:var(--display);font-size:2rem;letter-spacing:-.05em;margin-bottom:9px}.search-console p{color:var(--soft-ink);line-height:1.56}.need-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.field{padding:13px;border-radius:18px;box-shadow:none;background:#fbf8f0}.field label{display:block;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--jade);margin-bottom:8px}.field select,.field input{width:100%;border:0;background:transparent;color:var(--ink);outline:0;font-weight:760}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.chip{border:1px solid var(--line);border-radius:999px;padding:8px 10px;background:#fff;color:#4c5a55;font-size:12px;font-weight:760}.chip.active{background:var(--jade);color:#fff;border-color:var(--jade)}.mini-note{display:flex;gap:10px;align-items:flex-start;background:#f7f0df;border:1px dashed rgba(184,138,65,.45);border-radius:18px;padding:13px;color:#5d5140;font-size:13px;line-height:1.45}.mini-note b{color:var(--jade)}
-.helper-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.helper-card{overflow:hidden;border-radius:30px;transition:transform .2s,box-shadow .2s}.helper-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.helper-art{height:150px;background:linear-gradient(135deg,#f1e3ca,#f9f3e8);position:relative;overflow:hidden}.helper-art:before{content:"";position:absolute;inset:18px;border-radius:999px;background:radial-gradient(circle at 50% 30%,#d7c3a2 0 18%,#b9a17a 19% 28%,transparent 29%),linear-gradient(180deg,transparent 0 34%,rgba(47,103,89,.18) 35% 100%);opacity:.72}.helper-art:after{content:attr(data-initial);position:absolute;right:18px;bottom:10px;font-family:var(--display);font-size:76px;color:rgba(20,34,31,.08);font-weight:700}.helper-body{padding:18px}.status-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.status{display:inline-flex;align-items:center;gap:7px;background:#eef6f2;color:var(--jade);font-size:11px;font-weight:900;padding:7px 9px;border-radius:999px}.status:before{content:"";width:7px;height:7px;border-radius:999px;background:currentColor}.updated{font:700 10px var(--mono);color:var(--muted)}.helper-card h3{font-size:1.18rem;margin-bottom:7px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}.tags span{background:#f4eddc;border:1px solid rgba(184,138,65,.18);border-radius:999px;padding:6px 8px;font-size:11px;color:#604f35;font-weight:760}.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.card-actions .btn{min-height:42px;padding:10px 12px;font-size:12px}.card-actions .btn.light{box-shadow:none}
-.profile-layout{display:grid;grid-template-columns:.84fr 1.16fr;gap:22px}.profile-sheet{padding:26px;background:linear-gradient(180deg,#fffdf7,#fbf4e6)}.profile-code{font:800 12px var(--mono);color:var(--gold);letter-spacing:.08em;text-transform:uppercase}.profile-sheet h2{font-size:clamp(2.4rem,5vw,4.8rem);margin:10px 0}.profile-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:20px 0}.fact{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px}.fact small{display:block;color:var(--muted);font-size:11px;margin-bottom:5px}.fact b{font-size:14px}.timeline{display:grid;gap:12px}.timeline-step{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start}.num{width:42px;height:42px;border-radius:999px;background:var(--jade);color:#fff;display:grid;place-items:center;font-weight:900}.timeline-step .panel{padding:17px;border-radius:20px;box-shadow:0 8px 20px rgba(45,42,30,.06)}
-.owner-story{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}.admin-card{padding:24px;position:relative;overflow:hidden}.admin-card img{border-radius:24px;aspect-ratio:16/10;object-fit:cover;margin-top:18px;border:1px solid var(--line)}.admin-flow{display:grid;gap:10px}.admin-row{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px}.admin-row .num{background:#f5edda;color:var(--jade)}.admin-row b{display:block}.admin-row small{color:var(--muted)}
-.map-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.route-card{padding:16px;border-radius:20px;box-shadow:none;min-height:124px}.route-card span{display:block;font:900 11px var(--mono);color:var(--gold);margin-bottom:14px}.route-card b{display:block;margin-bottom:8px}.route-card small{color:var(--muted);line-height:1.35;display:block}.route-card.highlight{background:var(--ink);color:#fff}.route-card.highlight small{color:rgba(255,255,255,.7)}.route-card.highlight span{color:var(--gold-2)}
-.cta-band{display:grid;grid-template-columns:1fr .72fr;gap:22px;background:#fff;border:1px solid var(--line);border-radius:42px;padding:34px;box-shadow:var(--shadow);align-items:center}.cta-band h2{font-size:clamp(2rem,4.4vw,4.2rem)}.contact-card{background:#f6efe2;border-radius:30px;padding:22px;border:1px solid rgba(184,138,65,.18)}.contact-card .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(37,58,52,.12);padding:12px 0}.contact-card .row:last-child{border-bottom:0}.contact-card span{color:var(--muted)}.contact-card b{text-align:right}.fineprint{padding:34px 0 84px;color:var(--muted);font-size:12px;line-height:1.55}.fineprint a{text-decoration:underline;text-decoration-color:rgba(118,129,124,.45)}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}.reveal.in{opacity:1;transform:none}
-:focus-visible{outline:3px solid rgba(47,103,89,.38);outline-offset:3px}
-@media (max-width:980px){
-  .shell{width:min(100% - 22px,760px)}
-  .topbar{border-radius:24px;align-items:flex-start;flex-direction:column}.nav{width:100%;padding-bottom:2px}.brand b{max-width:none}
-  .hero{grid-template-columns:1fr;gap:24px;min-height:auto;padding-top:34px}.photo-frame img{aspect-ratio:4/4.75}.compass-card{position:relative;left:auto;right:auto;bottom:auto;margin:-42px 14px 0}.section-head,.journey .section-head,.search-stage,.profile-layout,.owner-story,.cta-band{grid-template-columns:1fr}.trust-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.journey{padding:24px}.search-console{position:relative;top:auto}.map-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:620px){
-  .privacy{left:10px;right:10px;text-align:center;padding:8px 10px}.section{padding:58px 0;scroll-margin-top:138px}h1{font-size:clamp(3rem,16vw,4.9rem)}.lead{font-size:1rem}.hero-proof{gap:8px}.proof-pill{font-size:12px;padding:8px 10px}.trust-grid,.helper-list,.need-grid,.profile-facts,.map-grid{grid-template-columns:1fr}.compass-line{grid-template-columns:1fr 1fr}.photo-frame{border-radius:30px}.helper-art{height:132px}.card-actions{grid-template-columns:1fr}.cta .btn{width:100%}.cta-band,.journey{border-radius:30px}.route-card{min-height:auto}.fineprint{padding-bottom:110px}
-}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
-
-
-/* Professional correction pass — 2026-07-06
-   Purpose: remove playful/fast-food feel; make it more HK employment-agency, document-led, and credible. */
-:root{
-  --porcelain:#f5f7fa;
+  --bg:#f4f6f8;
   --paper:#ffffff;
-  --linen:#e5e7eb;
-  --ink:#102033;
-  --soft-ink:#344054;
+  --paper-2:#f9fafb;
+  --ink:#101828;
+  --ink-2:#263447;
   --muted:#667085;
-  --jade:#1f5f55;
-  --jade-2:#173f3a;
-  --gold:#9b6b2f;
-  --gold-2:#c8a061;
-  --blush:#e8edf2;
-  --mist:#eef3f2;
-  --line:rgba(16,32,51,.13);
-  --shadow:0 18px 48px rgba(16,32,51,.10);
-  --tight-shadow:0 10px 28px rgba(16,32,51,.10);
-  --radius:14px;
-  --radius-sm:8px;
+  --line:#cfd6df;
+  --line-dark:#98a2b3;
+  --navy:#101828;
+  --green:#155e54;
+  --green-2:#0f4942;
+  --red:#a43b34;
+  --amber:#8a6116;
+  --body:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"Roboto Mono","SFMono-Regular",Consolas,monospace;
 }
-body{background:linear-gradient(180deg,#f8fafc 0%,#eef2f6 55%,#f8fafc 100%)}
-.topbar{border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.96);border-color:rgba(16,32,51,.12)}
-.mark{border-radius:8px;background:#102033;box-shadow:none}.brand small{color:#667085}.brand b{font-weight:850;letter-spacing:-.01em}
-.nav a,.nav a.primary,.nav a:hover,.nav a.active{border-radius:8px;transform:none}.nav a.primary{background:#1f5f55}.nav a:hover,.nav a.active{background:#102033}
-h1{font-family:var(--body);font-weight:850;line-height:.96;letter-spacing:-.045em}h1 em{font-style:normal;color:#1f5f55}.lead{max-width:720px;color:#344054}
-.privacy,.proof-pill,.btn,.chip,.status{border-radius:8px}.btn{box-shadow:0 10px 24px rgba(16,32,51,.16)}.btn:hover{transform:none}.btn.light{box-shadow:none}
-.photo-frame{border-radius:18px;background:#d9dee7;border-color:rgba(16,32,51,.12)}.photo-frame img{aspect-ratio:4/3.35;object-position:center}.photo-frame:after{background:linear-gradient(180deg,rgba(16,32,51,0) 58%,rgba(16,32,51,.42) 100%)}
-.compass-card{border-radius:14px;left:-14px;right:14px;background:#fff;border-color:rgba(16,32,51,.10)}.compass-line div{border-radius:8px;background:#f8fafc}.compass-top strong{font-family:var(--body);font-weight:850}
-.section-head{align-items:start}.kicker{color:#9b6b2f}h2{font-family:var(--body);font-weight:850;letter-spacing:-.035em;line-height:1.02}
-.trust-card,.panel,.helper-card,.field,.admin-card,.profile-sheet,.route-card,.search-console,.journey,.cta-band,.contact-card{border-radius:14px;box-shadow:0 10px 26px rgba(16,32,51,.07)}
-.icon{border-radius:8px;background:#edf4f3}.journey{background:linear-gradient(135deg,#102033,#1f5f55)}.step{border-radius:10px}.step span,.num{border-radius:8px}.field{border-radius:8px;background:#f8fafc}.mini-note{border-radius:8px;background:#f6f3ed}.route-card{border-radius:10px}.route-card.highlight{background:#102033}
-.helper-card{overflow:hidden;background:#fff;border-color:rgba(16,32,51,.12)}.helper-card:hover{transform:none;box-shadow:0 14px 34px rgba(16,32,51,.11)}
-.helper-art{height:214px;margin:0;background:#eef2f6;border-radius:0;position:relative;overflow:hidden}.helper-art:before,.helper-art:after{display:none!important}.helper-photo{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}.helper-body{padding:18px 18px 20px}.updated{color:#475467}.tags span{background:#f2f4f7;border-color:#eaecf0;color:#344054;border-radius:6px}.card-actions{grid-template-columns:1fr 1fr}.profile-sheet{background:#fff}.fact{border-radius:8px}.timeline-step .panel{border-radius:10px}.admin-row{border-radius:10px}
-.cta-band{border-radius:16px}.fineprint{color:#667085}
-@media (max-width:620px){.photo-frame,.journey,.cta-band{border-radius:14px}.compass-card{margin:-24px 10px 0}.helper-art{height:230px}.topbar{border-radius:10px}}
-
+*{box-sizing:border-box;border-radius:0!important;}
+html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:var(--body);background:linear-gradient(180deg,#f6f8fa 0%,#eef2f5 100%);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}img{display:block;max-width:100%}
+.skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}.skip:focus{left:16px;top:16px;width:auto;height:auto;background:var(--navy);color:#fff;padding:12px 16px;z-index:999}
+.private-label{position:fixed;right:16px;bottom:16px;z-index:90;background:var(--navy);color:#fff;border:1px solid rgba(255,255,255,.2);padding:9px 12px;font-size:11px;letter-spacing:.06em}
+.shell{width:min(1180px,calc(100% - 28px));margin:0 auto}.section{padding:74px 0;scroll-margin-top:104px}.rule{border-top:1px solid var(--line)}
+.topbar{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);box-shadow:0 6px 20px rgba(16,24,40,.05)}
+.topbar-inner{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.mark{width:42px;height:42px;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:900;letter-spacing:.02em}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase}.brand b{display:block;font-size:17px;letter-spacing:.02em;white-space:nowrap}.nav{display:flex;align-items:center;gap:2px;overflow:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{display:block;padding:13px 13px;font-size:13px;font-weight:800;color:#465568;border-left:1px solid transparent}.nav a.active,.nav a:hover,.nav a.primary{background:var(--navy);color:#fff}
+.hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:stretch;min-height:calc(100vh - 70px);padding-top:46px}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--green);font-size:13px;font-weight:900;letter-spacing:.1em}.eyebrow:before{content:"";width:44px;height:2px;background:var(--green)}
+h1{margin:18px 0 22px;font-size:clamp(2.65rem,6.6vw,6.2rem);line-height:.98;letter-spacing:-.055em;font-weight:950}h1 span{color:var(--green)}.lead{font-size:clamp(1.03rem,1.8vw,1.22rem);line-height:1.78;color:var(--ink-2);max-width:680px;margin:0 0 24px}.proof-row{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);background:var(--paper);margin:28px 0}.proof{padding:16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.proof:nth-child(2n){border-right:0}.proof:nth-child(n+3){border-bottom:0}.proof b{display:block;font-size:15px;margin-bottom:5px}.proof small{display:block;color:var(--muted);line-height:1.5}.cta{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--navy);background:var(--navy);color:#fff;padding:14px 18px;font-weight:900;min-height:48px;cursor:pointer}.btn.light{background:#fff;color:var(--navy)}.btn.green{background:var(--green);border-color:var(--green)}
+.roster-board{background:#fff;border:1px solid var(--line-dark);box-shadow:0 18px 46px rgba(16,24,40,.12);display:grid;grid-template-rows:auto 1fr}.board-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;background:var(--navy);color:#fff;padding:16px 18px}.board-head small{display:block;color:#cbd5e1;margin-bottom:4px;font-size:11px;letter-spacing:.11em}.board-head b{font-size:20px}.board-head span{font:800 12px var(--mono);color:#d0d5dd}.portrait-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}.portrait-card{position:relative;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.portrait-card:nth-child(2n){border-right:0}.portrait-card img{width:100%;height:230px;object-fit:cover;object-position:center 20%;filter:saturate(.94) contrast(1.02)}.portrait-caption{padding:13px 14px;display:grid;gap:6px}.portrait-caption b{font-size:16px}.portrait-caption small{color:var(--muted);line-height:1.45}.badge{position:absolute;left:10px;top:10px;background:rgba(16,24,40,.92);color:#fff;padding:6px 8px;font-size:11px;font-weight:900}.board-foot{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;background:#f9fafb;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:.82fr .48fr;gap:30px;align-items:start;margin-bottom:28px}.kicker{font-size:12px;letter-spacing:.13em;color:var(--amber);font-weight:950;margin-bottom:10px}.section-head h2,h2{font-size:clamp(2rem,4.2vw,4.2rem);line-height:1.08;letter-spacing:-.04em;margin:0 0 10px;font-weight:950}.section-head p,.section-intro{color:var(--ink-2);line-height:1.75;margin:0}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line-dark);background:#fff}.trust-card{padding:22px;min-height:220px;border-right:1px solid var(--line);background:#fff}.trust-card:last-child{border-right:0}.trust-card .num{font:900 13px var(--mono);color:var(--green);display:block;margin-bottom:28px}.trust-card h3{font-size:19px;margin:0 0 12px}.trust-card p{color:var(--muted);line-height:1.66;margin:0}.journey{background:var(--navy);color:#fff;border:1px solid var(--navy);padding:34px}.journey .kicker{color:#c7a15a}.journey .section-head p{color:#d0d5dd}.steps{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid rgba(255,255,255,.28)}.step{padding:20px;border-right:1px solid rgba(255,255,255,.22);min-height:180px}.step:last-child{border-right:0}.step span{font:900 13px var(--mono);color:#c7a15a}.step h3{font-size:18px;margin:22px 0 9px;color:#fff}.step p{color:#d0d5dd;line-height:1.56;margin:0;font-size:14px}
+.search-stage{display:grid;grid-template-columns:.82fr 1.18fr;gap:22px;align-items:start}.search-console{background:#fff;border:1px solid var(--line-dark);padding:24px;position:sticky;top:96px}.search-console h3{font-size:26px;margin:0 0 8px}.search-console p{line-height:1.7;color:var(--muted)}.need-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);margin:18px 0}.field{padding:12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.field:nth-child(2n){border-right:0}.field:nth-child(n+3){border-bottom:0}.field label{display:block;color:var(--green);font-weight:950;font-size:12px;letter-spacing:.08em;margin-bottom:8px}.field input,.field select{width:100%;border:0;background:#fff;color:var(--ink);outline:0;font-weight:800}.chips{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-bottom:0}.chip{padding:9px 10px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;font-weight:850;background:#fff}.chip.active{background:var(--green);color:#fff}.mini-note{border-left:4px solid var(--green);background:#f8fafc;padding:14px;color:#475467;line-height:1.58}.helper-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.helper-card{background:#fff;border:1px solid var(--line-dark)}.helper-art{margin:0;border-bottom:1px solid var(--line);background:#eef2f6}.helper-photo{width:100%;height:260px;object-fit:cover;object-position:center 18%}.helper-body{padding:17px}.status-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.status{background:#e8f3f0;color:var(--green);border-left:4px solid var(--green);padding:6px 8px;font-size:12px;font-weight:950}.updated{font:800 11px var(--mono);color:var(--muted)}.helper-card h3{font-size:22px;margin:0 0 8px}.helper-card p{color:var(--ink-2);line-height:1.62;margin:0}.tags{display:flex;flex-wrap:wrap;margin:14px 0 0;border:1px solid var(--line);border-bottom:0;border-right:0}.tags span{padding:7px 9px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;color:#344054;background:#f9fafb}.card-actions{display:grid;grid-template-columns:1fr 1fr;margin-top:14px}.card-actions .btn{text-align:center;padding:12px 10px;font-size:13px}
+.profile-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}.profile-sheet{background:#fff;border:1px solid var(--line-dark);padding:24px}.profile-photo{width:100%;height:360px;object-fit:cover;object-position:center 18%;border:1px solid var(--line);margin:16px 0}.profile-code{font:900 12px var(--mono);color:var(--amber);letter-spacing:.08em}.profile-sheet h2{font-size:clamp(2.4rem,5vw,5rem);margin:10px 0}.profile-facts{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);margin:20px 0}.fact{padding:13px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.fact:nth-child(2n){border-right:0}.fact:nth-child(n+3){border-bottom:0}.fact small{display:block;color:var(--muted);margin-bottom:6px}.fact b{font-size:15px}.timeline{display:grid;gap:0;border:1px solid var(--line-dark);background:#fff}.timeline-step{display:grid;grid-template-columns:62px 1fr;border-bottom:1px solid var(--line)}.timeline-step:last-child{border-bottom:0}.num{display:grid;place-items:center;background:var(--navy);color:#fff;font:900 14px var(--mono)}.panel{padding:18px;background:#fff}.panel h3{margin:0 0 8px;font-size:18px}.panel p{margin:0;color:var(--muted);line-height:1.6}.owner-story{display:grid;grid-template-columns:1fr 1fr;gap:18px}.admin-card{border:1px solid var(--line-dark);background:#fff;padding:22px}.admin-card h3{font-size:22px;margin:0 0 10px}.admin-card p{line-height:1.68;color:var(--ink-2)}.admin-card img{border:1px solid var(--line);margin-top:16px;width:100%;height:280px;object-fit:cover}.admin-flow{border:1px solid var(--line);margin-top:14px}.admin-row{display:grid;grid-template-columns:54px 1fr;border-bottom:1px solid var(--line)}.admin-row:last-child{border-bottom:0}.admin-row .num{background:#f1f5f9;color:var(--navy)}.admin-row div:last-child{padding:13px}.admin-row b{display:block;margin-bottom:4px}.admin-row small{color:var(--muted);line-height:1.45}.map-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line-dark);background:#fff}.route-card{padding:16px;min-height:124px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.route-card:nth-child(4n){border-right:0}.route-card:nth-last-child(-n+4){border-bottom:0}.route-card span{font:900 11px var(--mono);color:var(--amber);display:block;margin-bottom:14px}.route-card b{display:block;margin-bottom:8px}.route-card small{display:block;color:var(--muted);line-height:1.42}.route-card.highlight{background:var(--navy);color:#fff}.route-card.highlight small{color:#d0d5dd}.cta-band{display:grid;grid-template-columns:1fr .75fr;gap:24px;background:#fff;border:1px solid var(--line-dark);padding:32px}.contact-card{border:1px solid var(--line);background:#f9fafb}.contact-card .row{display:flex;justify-content:space-between;gap:12px;padding:14px;border-bottom:1px solid var(--line)}.contact-card .row:last-child{border-bottom:0}.contact-card span{color:var(--muted)}.contact-card b{text-align:right}.fineprint{padding:34px 0 88px;color:var(--muted);font-size:12px;line-height:1.7}.reveal{opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}.reveal.in{opacity:1;transform:none}:focus-visible{outline:3px solid rgba(21,94,84,.42);outline-offset:2px}
+@media(max-width:980px){.shell{width:min(100% - 22px,760px)}.topbar-inner{height:auto;min-height:70px;align-items:flex-start;flex-direction:column;padding:12px 0}.nav{width:100%}.hero,.section-head,.search-stage,.profile-layout,.owner-story,.cta-band{grid-template-columns:1fr}.trust-grid{grid-template-columns:repeat(2,1fr)}.trust-card:nth-child(2n){border-right:0}.trust-card:nth-child(n+3){border-top:1px solid var(--line)}.steps{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid rgba(255,255,255,.22);min-height:auto}.step:last-child{border-bottom:0}.search-console{position:relative;top:auto}.map-grid{grid-template-columns:repeat(2,1fr)}.route-card:nth-child(4n){border-right:1px solid var(--line)}.route-card:nth-child(2n){border-right:0}.route-card:nth-last-child(-n+4){border-bottom:1px solid var(--line)}.route-card:nth-last-child(-n+2){border-bottom:0}}
+@media(max-width:620px){.section{padding:56px 0;scroll-margin-top:140px}.private-label{left:10px;right:10px;text-align:center}.hero{padding-top:28px}h1{font-size:clamp(2.45rem,13vw,4rem)}.proof-row,.portrait-grid,.need-grid,.helper-list,.profile-facts,.map-grid{grid-template-columns:1fr}.proof,.portrait-card,.field,.route-card{border-right:0!important}.proof:nth-child(n+3),.field:nth-child(n+3),.route-card:nth-last-child(-n+2){border-bottom:1px solid var(--line)}.proof:last-child,.field:last-child,.route-card:last-child{border-bottom:0}.portrait-card img,.helper-photo{height:300px}.profile-photo{height:330px}.cta .btn,.card-actions{width:100%;grid-template-columns:1fr}.board-foot{flex-direction:column}.trust-grid{grid-template-columns:1fr}.trust-card{border-right:0;border-bottom:1px solid var(--line)}.trust-card:last-child{border-bottom:0}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
-<body data-feature="live-updated-profiles guided-interviews helper-self-update shareable-helper-detail premium-concierge-search">
-<a class="skip" href="#main">Skip to content</a>
-<div class="privacy">private noindex preview · synthetic helper data</div>
-<header class="shell topbar" aria-label="Preview navigation">
-  <a class="brand" href="#/home" aria-label="Sunny Helper Concierge home">
-    <span class="mark">S</span>
-    <span><small>Counter-copy demo</small><b>Professional Helper Agency</b></span>
-  </a>
-  <nav class="nav" id="nav" aria-label="Sections">
-    <a href="#/home" data-route="home">Home</a>
-    <a href="#/search" data-route="search" class="primary">Search</a>
-    <a href="#/detail" data-route="detail">Live profile</a>
-    <a href="#/owner" data-route="owner">Owner flow</a>
-    <a href="#/map" data-route="map">Full map</a>
-    <a href="#/contact" data-route="contact">Interview</a>
-  </nav>
+<body data-feature="traditional-chinese straight-corners maid-portraits live-profile helper-self-update hk-employment-agency">
+<a class="skip" href="#main">跳到主要內容</a>
+<div class="private-label">私人示範 · 合成外傭資料 · 不收錄</div>
+<header class="topbar" aria-label="網站導覽">
+  <div class="shell topbar-inner">
+    <a class="brand" href="#/home" aria-label="專業僱傭中心示範首頁"><span class="mark">傭</span><span><small>香港僱傭中心網站示範</small><b>專業僱傭中心示範</b></span></a>
+    <nav class="nav" id="nav" aria-label="頁面區段">
+      <a href="#/home" data-route="home">首頁</a>
+      <a href="#/search" data-route="search" class="primary">外傭搜尋</a>
+      <a href="#/detail" data-route="detail">外傭詳情</a>
+      <a href="#/owner" data-route="owner">後台流程</a>
+      <a href="#/map" data-route="map">功能地圖</a>
+      <a href="#/contact" data-route="contact">預約面試</a>
+    </nav>
+  </div>
 </header>
 <main id="main" class="shell">
   <section id="home" class="hero section reveal" aria-labelledby="hero-title">
     <div>
-      <div class="eyebrow">Hong Kong family-care agency prototype</div>
-      <h1 id="hero-title">Find the right helper faster — with <em>live updated profiles.</em></h1>
-      <p class="lead">A warmer, more convincing counter-copy direction for GoldenWin / Sunny: not a cold database first, but a calm service journey that helps a busy family trust the agency, search quickly, share one live profile, and request an interview with confidence.</p>
-      <div class="hero-proof" aria-label="Trust promises">
-        <span class="proof-pill"><span class="dot"></span> Updated status visible</span>
-        <span class="proof-pill"><span class="dot"></span> Guided interview request</span>
-        <span class="proof-pill"><span class="dot"></span> Shareable helper profile</span>
-        <span class="proof-pill"><span class="dot"></span> Staff follow-up after click</span>
+      <div class="eyebrow">香港家庭外傭配對網站方向</div>
+      <h1 id="hero-title">先看得到<span>外傭本人</span>，再相信資料是否最新。</h1>
+      <p class="lead">這版不再做圓角、快餐式、SaaS 風格。首頁第一眼直接展示外傭名冊、更新狀態、可面試資料與職員審核訊息，感覺更像香港僱傭中心，而不是西式生活品牌。</p>
+      <div class="proof-row" aria-label="信任重點">
+        <div class="proof"><b>外傭相片先出現</b><small>使用合成專業證件相風格，不再用抽象插圖或圓形 avatar。</small></div>
+        <div class="proof"><b>直角資料版面</b><small>改成文件、名冊、審核表格感覺，降低玩味。</small></div>
+        <div class="proof"><b>繁體中文溝通</b><small>用香港家庭會看的語言：更新、審核、可面試、分享連結。</small></div>
+        <div class="proof"><b>即時名冊概念</b><small>解決 PDF 過期、WhatsApp 傳錯版本、客人重複追問的痛點。</small></div>
       </div>
-      <div class="cta">
-        <a class="btn jade" href="#/search">Start with care need</a>
-        <a class="btn light" href="#/detail">View live profile concept</a>
-      </div>
+      <div class="cta"><a class="btn green" href="#/search">查看外傭名冊</a><a class="btn light" href="#/detail">查看即時詳情頁</a></div>
     </div>
-    <div class="hero-card" aria-label="Family care visual">
-      <figure class="photo-frame">
-        <img src="assets/agency-consultation.webp" alt="Synthetic professional Hong Kong employment agency consultation scene with verified helper profiles">
-      </figure>
-      <div class="compass-card" aria-label="Care compass">
-        <div class="compass-top"><strong>Care compass</strong><span>less noise · more trust</span></div>
-        <div class="compass-line">
-          <div><b>Need</b><small>Baby, elder, cooking, pets, timetable</small></div>
-          <div><b>Match</b><small>Only profiles that fit first</small></div>
-          <div><b>Interview</b><small>Clear next step, not a cold cart</small></div>
-          <div><b>Track</b><small>Status updates after request</small></div>
-        </div>
+    <aside class="roster-board" aria-label="外傭名冊主視覺">
+      <div class="board-head"><div><small>即時外傭名冊</small><b>可面試外傭名冊</b></div><span>更新 2026-07-06</span></div>
+      <div class="portrait-grid">
+        <article class="portrait-card"><span class="badge">可面試</span><img src="assets/helper-mara.webp" alt="合成外傭 Mara 專業相片"><div class="portrait-caption"><b>Mara · 31</b><small>菲律賓｜新生兒照顧｜已由職員審核</small></div></article>
+        <article class="portrait-card"><span class="badge">職員已核對</span><img src="assets/helper-ana.webp" alt="合成外傭 Ana 專業相片"><div class="portrait-caption"><b>Ana · 36</b><small>印尼｜長者照顧｜基本廣東話</small></div></article>
+        <article class="portrait-card"><span class="badge">本週更新</span><img src="assets/helper-lina.webp" alt="合成外傭 Lina 專業相片"><div class="portrait-caption"><b>Lina · 28</b><small>菲律賓｜寵物家庭｜煮食及日常清潔</small></div></article>
+        <article class="portrait-card"><span class="badge">可分享</span><img src="assets/helper-rhea.webp" alt="合成外傭 Rhea 專業相片"><div class="portrait-caption"><b>Rhea · 34</b><small>菲律賓｜香港經驗｜接送小朋友</small></div></article>
       </div>
-    </div>
+      <div class="board-foot"><span>只作設計示範，所有人物及資料均為合成。</span><b>搜尋 → 詳情 → 面試</b></div>
+    </aside>
   </section>
 
-  <section id="trust" class="section reveal" aria-labelledby="trust-title">
-    <div class="section-head">
-      <div><div class="kicker">Why this feels safer</div><h2 id="trust-title">Beauty here means reducing anxiety.</h2></div>
-      <p>A maid-agency site wins when the family immediately feels: “the records are current, the agency is organized, and I know what happens next.” The design uses calm spacing, human language, and proof before filters.</p>
-    </div>
+  <section id="trust" class="section reveal rule" aria-labelledby="trust-title">
+    <div class="section-head"><div><div class="kicker">為何客人會覺得可信</div><h2 id="trust-title">僱傭中心的美感，不是可愛，是資料有秩序。</h2></div><p>香港家庭最怕資料過期、相片不真、面試安排混亂、費用和程序不清楚。所以版面要像一份可靠名冊：相片、更新日期、審核狀態、下一步，全部看得清楚。</p></div>
     <div class="trust-grid">
-      <article class="trust-card"><div class="icon">✓</div><h3>Updated profiles</h3><p>Every card shows last update and reviewed fields, solving the outdated-PDF mismatch problem.</p><b>Trust cue</b></article>
-      <article class="trust-card"><div class="icon">☎</div><h3>Human follow-up</h3><p>Interview buttons are framed as guided consultation, not checkout. Staff contact remains central.</p><b>Warmth cue</b></article>
-      <article class="trust-card"><div class="icon">↗</div><h3>Shareable link</h3><p>One live helper profile can be sent to spouse/family; no stale file copies floating around WhatsApp.</p><b>Speed cue</b></article>
-      <article class="trust-card"><div class="icon">◎</div><h3>Clear process</h3><p>Before asking for forms/payment, the page explains the next steps and gives families control.</p><b>Safety cue</b></article>
+      <article class="trust-card"><span class="num">01</span><h3>相片與身份感</h3><p>外傭照片要直接放在名冊和詳情頁，不要躲在抽象圖後面。客人先看人，才看條件。</p></article>
+      <article class="trust-card"><span class="num">02</span><h3>更新日期明顯</h3><p>每張卡清楚顯示更新日和職員審核，讓客人知道不是舊 PDF。</p></article>
+      <article class="trust-card"><span class="num">03</span><h3>面試不是購物車</h3><p>按鈕語氣改為「預約面試／職員跟進」，更符合服務業務。</p></article>
+      <article class="trust-card"><span class="num">04</span><h3>全站直角</h3><p>停止大圓角和 bubble UI，改用文件、表格、名冊式直角框線。</p></article>
     </div>
   </section>
 
-  <section class="section reveal" aria-label="End-user journey">
+  <section class="section reveal" aria-label="用戶流程">
     <div class="journey">
-      <div class="section-head">
-        <div><div class="kicker">End-user journey</div><h2>Show less first. Earn the search.</h2></div>
-        <p>The database appears after the visitor understands the promise. This makes the owner look more professional while still proving the search can be fast.</p>
-      </div>
+      <div class="section-head"><div><div class="kicker">家庭用戶視角</div><h2>由「我需要請人」到「我可以約見」。</h2></div><p>不要一開始塞滿功能。先讓客人看見外傭、確認資料新鮮、知道下一步，才進入篩選和表格。</p></div>
       <div class="steps">
-        <article class="step"><span>1</span><h3>Tell us your care need</h3><p>Plain language: baby, elderly, cooking, pet, start date.</p></article>
-        <article class="step"><span>2</span><h3>Review matched helpers</h3><p>Small shortlist first, deeper filters only when needed.</p></article>
-        <article class="step"><span>3</span><h3>Share live profile</h3><p>One link stays current after staff review.</p></article>
-        <article class="step"><span>4</span><h3>Request interview</h3><p>Family sends intent; agency confirms details.</p></article>
-        <article class="step"><span>5</span><h3>Track next steps</h3><p>Application progress replaces “please call again” uncertainty.</p></article>
+        <article class="step"><span>01</span><h3>選擇家庭需要</h3><p>初生嬰兒、長者、煮食、寵物、上班家庭。</p></article>
+        <article class="step"><span>02</span><h3>查看合適外傭</h3><p>先顯示少量匹配名冊，再開進階篩選。</p></article>
+        <article class="step"><span>03</span><h3>打開即時詳情</h3><p>同一條連結可分享給家人，不再傳多份 PDF。</p></article>
+        <article class="step"><span>04</span><h3>預約面試</h3><p>留下意向，由職員確認時間、語言及文件。</p></article>
+        <article class="step"><span>05</span><h3>跟進申請進度</h3><p>之後可延伸為合約、付款、續約、文件進度。</p></article>
       </div>
     </div>
   </section>
 
-  <section id="search" class="section reveal" aria-labelledby="search-title">
-    <div class="section-head">
-      <div><div class="kicker">Need-based search</div><h2 id="search-title">A fast search that does not feel like a spreadsheet.</h2></div>
-      <p>Designed for a mobile Hong Kong employer: answer a few human questions first, then see only relevant profiles with update status, verified fields, share link and interview CTA.</p>
-    </div>
+  <section id="search" class="section reveal rule" aria-labelledby="search-title">
+    <div class="section-head"><div><div class="kicker">外傭搜尋</div><h2 id="search-title">先用家庭需要配對，再看完整名冊。</h2></div><p>手機上不應先看到一堆亂 filter。先用幾個家庭語言問題，然後顯示外傭照片、更新狀態、適合原因、分享及面試行動。</p></div>
     <div class="search-stage">
-      <aside class="search-console" aria-label="Search controls">
-        <h3>What kind of help do you need?</h3>
-        <p>Choose the situation first. Fine filters can expand later; the first screen stays calm.</p>
+      <aside class="search-console" aria-label="搜尋條件">
+        <h3>你家中最需要哪類幫手？</h3><p>先選情況，不要一開始逼客人看 Excel 式資料庫。</p>
         <div class="need-grid">
-          <div class="field"><label for="need">Care need</label><select id="need"><option>Newborn / child care</option><option>Elderly care</option><option>Cooking focus</option><option>Pet-friendly household</option></select></div>
-          <div class="field"><label for="start">Start date</label><select id="start"><option>Within 2 weeks</option><option>This month</option><option>Flexible</option></select></div>
-          <div class="field"><label for="livein">Living</label><select id="livein"><option>Live-in helper</option><option>Finish contract</option><option>Overseas applicant</option></select></div>
-          <div class="field"><label for="code">Known code</label><input id="code" value="SUN-PH-" aria-label="Known helper code"></div>
+          <div class="field"><label for="need">照顧需要</label><select id="need"><option>初生嬰兒／小朋友</option><option>長者照顧</option><option>煮食為主</option><option>寵物家庭</option></select></div>
+          <div class="field"><label for="start">上班日期</label><select id="start"><option>兩星期內</option><option>本月內</option><option>可商議</option></select></div>
+          <div class="field"><label for="livein">類別</label><select id="livein"><option>住家外傭</option><option>完約外傭</option><option>海外申請</option></select></div>
+          <div class="field"><label for="code">外傭編號</label><input id="code" value="SUN-PH-" aria-label="外傭編號"></div>
         </div>
-        <div class="chips" aria-label="Quick filters">
-          <span class="chip active">Updated this week</span><span class="chip">Can cook Chinese food</span><span class="chip">Elderly care</span><span class="chip">Interview ready</span><span class="chip">Shareable video</span>
-        </div>
-        <div class="mini-note"><span>✦</span><span><b>Owner value:</b> this can later connect to a 50-helper live database, while the public UI stays simple and premium.</span></div>
+        <div class="chips" aria-label="快速篩選"><span class="chip active">本週更新</span><span class="chip">懂煮中菜</span><span class="chip">長者經驗</span><span class="chip">可即時面試</span><span class="chip">有影片備註</span></div>
+        <div class="mini-note"><b>業務價值：</b> 將來可接駁約 50 位外傭資料庫，但前台保持清楚、專業、適合手機查看。</div>
       </aside>
-      <div class="helper-list" aria-label="Synthetic helper cards">
-        <article class="helper-card"><figure class="helper-art"><img class="helper-photo" src="assets/helper-mara.webp" alt="Synthetic professional profile portrait of Mara"></figure><div class="helper-body"><div class="status-row"><span class="status">Available</span><span class="updated">Updated Jul 06</span></div><h3>Mara · 31</h3><p>Synthetic profile SUN-PH-2601. Warm childcare experience, cooking basics, available for guided interview.</p><div class="tags"><span>Newborn care</span><span>Cooking</span><span>English</span></div><div class="card-actions"><a class="btn light" href="#/detail">Share profile</a><a class="btn jade" href="#/contact">Request interview</a></div></div></article>
-        <article class="helper-card"><figure class="helper-art"><img class="helper-photo" src="assets/helper-ana.webp" alt="Synthetic professional profile portrait of Ana"></figure><div class="helper-body"><div class="status-row"><span class="status">Interview ready</span><span class="updated">Updated Jul 05</span></div><h3>Ana · 36</h3><p>Synthetic profile SUN-PH-2602. Elderly care, medication reminders, careful household routines.</p><div class="tags"><span>Elderly care</span><span>Cleaning</span><span>Cantonese basic</span></div><div class="card-actions"><a class="btn light" href="#/detail">Share profile</a><a class="btn jade" href="#/contact">Request interview</a></div></div></article>
-        <article class="helper-card"><figure class="helper-art"><img class="helper-photo" src="assets/helper-lina.webp" alt="Synthetic professional profile portrait of Lina"></figure><div class="helper-body"><div class="status-row"><span class="status">Available</span><span class="updated">Updated Jul 04</span></div><h3>Lina · 28</h3><p>Synthetic profile SUN-PH-2603. Pet-friendly, groceries, cooking, and tidy routines for busy family homes.</p><div class="tags"><span>Pets</span><span>Marketing trips</span><span>Cooking</span></div><div class="card-actions"><a class="btn light" href="#/detail">Share profile</a><a class="btn jade" href="#/contact">Request interview</a></div></div></article>
-        <article class="helper-card"><figure class="helper-art"><img class="helper-photo" src="assets/helper-rhea.webp" alt="Synthetic professional profile portrait of Rhea"></figure><div class="helper-body"><div class="status-row"><span class="status">Staff reviewed</span><span class="updated">Updated Jul 03</span></div><h3>Rhea · 34</h3><p>Synthetic profile SUN-PH-2604. Finish-contract style record, school run support and family cooking.</p><div class="tags"><span>Child care</span><span>School run</span><span>HK experience</span></div><div class="card-actions"><a class="btn light" href="#/detail">Share profile</a><a class="btn jade" href="#/contact">Request interview</a></div></div></article>
+      <div class="helper-list" aria-label="合成外傭卡片">
+        <article class="helper-card"><figure class="helper-art"><img class="helper-photo" src="assets/helper-mara.webp" alt="合成外傭 Mara 專業相片"></figure><div class="helper-body"><div class="status-row"><span class="status">可面試</span><span class="updated">更新 07-06</span></div><h3>Mara · 31</h3><p>合成資料 SUN-PH-2601。新生兒照顧、基本煮食，可安排視像或電話面試。</p><div class="tags"><span>新生兒</span><span>煮食</span><span>英文</span></div><div class="card-actions"><a class="btn light" href="#/detail">分享詳情</a><a class="btn green" href="#/contact">預約面試</a></div></div></article>
+        <article class="helper-card"><figure class="helper-art"><img class="helper-photo" src="assets/helper-ana.webp" alt="合成外傭 Ana 專業相片"></figure><div class="helper-body"><div class="status-row"><span class="status">職員已核對</span><span class="updated">更新 07-05</span></div><h3>Ana · 36</h3><p>合成資料 SUN-ID-2602。長者照顧、服藥提醒、日常清潔及穩定家庭流程。</p><div class="tags"><span>長者照顧</span><span>清潔</span><span>基本廣東話</span></div><div class="card-actions"><a class="btn light" href="#/detail">分享詳情</a><a class="btn green" href="#/contact">預約面試</a></div></div></article>
+        <article class="helper-card"><figure class="helper-art"><img class="helper-photo" src="assets/helper-lina.webp" alt="合成外傭 Lina 專業相片"></figure><div class="helper-body"><div class="status-row"><span class="status">本週更新</span><span class="updated">更新 07-04</span></div><h3>Lina · 28</h3><p>合成資料 SUN-PH-2603。寵物家庭、買餸、煮食及日常家務，適合上班家庭。</p><div class="tags"><span>寵物</span><span>買餸</span><span>煮食</span></div><div class="card-actions"><a class="btn light" href="#/detail">分享詳情</a><a class="btn green" href="#/contact">預約面試</a></div></div></article>
+        <article class="helper-card"><figure class="helper-art"><img class="helper-photo" src="assets/helper-rhea.webp" alt="合成外傭 Rhea 專業相片"></figure><div class="helper-body"><div class="status-row"><span class="status">可分享</span><span class="updated">更新 07-03</span></div><h3>Rhea · 34</h3><p>合成資料 SUN-PH-2604。完約風格紀錄、接送小朋友、家庭煮食及香港經驗。</p><div class="tags"><span>小朋友</span><span>接送</span><span>香港經驗</span></div><div class="card-actions"><a class="btn light" href="#/detail">分享詳情</a><a class="btn green" href="#/contact">預約面試</a></div></div></article>
       </div>
     </div>
   </section>
 
-  <section id="detail" class="section reveal" aria-labelledby="detail-title">
-    <div class="section-head">
-      <div><div class="kicker">Shareable profile route</div><h2 id="detail-title">One live helper detail page, not five stale PDFs.</h2></div>
-      <p>This route demonstrates the client’s key need: a shareable maid detail link with visible update status, verified fields, and a clear interview action. All content is synthetic.</p>
-    </div>
+  <section id="detail" class="section reveal rule" aria-labelledby="detail-title">
+    <div class="section-head"><div><div class="kicker">即時外傭詳情頁</div><h2 id="detail-title">一條連結，代替多份過期 PDF。</h2></div><p>這是 Frank 太太真正需要的心理價值：客人收到的是最新可查看的外傭詳情，而不是 WhatsApp 入面一堆舊文件。</p></div>
     <div class="profile-layout">
-      <article class="profile-sheet">
-        <span class="profile-code">SUN-PH-2601 · synthetic record</span>
-        <h2>Mara</h2>
-        <p class="section-intro">31 · Philippines · single · available for interview. Profile reviewed by staff after helper self-update form.</p>
-        <div class="profile-facts">
-          <div class="fact"><small>Last updated</small><b>2026-07-06 09:20</b></div>
-          <div class="fact"><small>Review status</small><b>Staff checked</b></div>
-          <div class="fact"><small>Best fit</small><b>Newborn + cooking</b></div>
-          <div class="fact"><small>Share link</small><b>/helper/SUN-PH-2601</b></div>
-        </div>
-        <div class="cta"><a class="btn jade" href="#/contact">Request interview</a><a class="btn light" href="#/search">Back to search</a></div>
-      </article>
-      <div class="timeline" aria-label="Profile update and interview timeline">
-        <div class="timeline-step"><div class="num">1</div><article class="panel"><h3>Helper updates form</h3><p>Helper submits new experience, availability, video note, and preferred duties. No public change yet.</p></article></div>
-        <div class="timeline-step"><div class="num">2</div><article class="panel"><h3>Staff reviews fields</h3><p>Agency checks dates, availability, and key claims before the live profile changes.</p></article></div>
-        <div class="timeline-step"><div class="num">3</div><article class="panel"><h3>Client link updates automatically</h3><p>The family sees the latest profile and does not need a replacement PDF in WhatsApp.</p></article></div>
-        <div class="timeline-step"><div class="num">4</div><article class="panel"><h3>Interview request creates next step</h3><p>Staff confirms time, language, video/phone preference, and documents needed.</p></article></div>
-      </div>
+      <article class="profile-sheet"><span class="profile-code">SUN-PH-2601 · 合成外傭紀錄</span><h2>Mara</h2><img class="profile-photo" src="assets/helper-mara.webp" alt="Mara 合成外傭詳情相片"><p class="section-intro">31 歲 · 菲律賓 · 可面試。資料由外傭自填後，再經職員核對才公開。</p><div class="profile-facts"><div class="fact"><small>最後更新</small><b>2026-07-06 09:20</b></div><div class="fact"><small>審核狀態</small><b>職員已核對</b></div><div class="fact"><small>最適合</small><b>新生兒＋煮食</b></div><div class="fact"><small>分享連結</small><b>/helper/SUN-PH-2601</b></div></div><div class="cta"><a class="btn green" href="#/contact">預約面試</a><a class="btn light" href="#/search">返回名冊</a></div></article>
+      <div class="timeline" aria-label="資料更新與面試流程"><div class="timeline-step"><div class="num">01</div><article class="panel"><h3>外傭自填更新</h3><p>更新工作經驗、可上班日期、技能、影片備註及期望工作。</p></article></div><div class="timeline-step"><div class="num">02</div><article class="panel"><h3>職員審核資料</h3><p>核對日期、可面試狀態及主要說法，避免客人看到未確認資料。</p></article></div><div class="timeline-step"><div class="num">03</div><article class="panel"><h3>客人連結自動更新</h3><p>同一條連結顯示最新版，不需要重新傳 PDF。</p></article></div><div class="timeline-step"><div class="num">04</div><article class="panel"><h3>預約面試後跟進</h3><p>職員確認時間、語言、視像／電話方式及所需文件。</p></article></div></div>
     </div>
   </section>
 
-  <section id="owner" class="section reveal" aria-labelledby="owner-title">
-    <div class="section-head">
-      <div><div class="kicker">Owner/admin story</div><h2 id="owner-title">The business looks premium because the back office looks organized.</h2></div>
-      <p>Frank’s wife/site owner should feel this understands her real operation: around 50 helpers, fast mobile search, fewer outdated PDF arguments, and a future path to CRM replacement without forcing it now.</p>
-    </div>
-    <div class="owner-story">
-      <article class="admin-card">
-        <h3>Mobile search app feeling</h3>
-        <p>Use the phone visual to show the client a practical future: clients shortlist, share and request interviews quickly, while staff remains in control.</p>
-        <img src="assets/app-search.webp" alt="Synthetic phone mockup showing a helper search interface over Hong Kong skyline">
-      </article>
-      <article class="admin-card">
-        <h3>Self-update → staff review → live link</h3>
-        <div class="admin-flow">
-          <div class="admin-row"><div class="num">1</div><div><b>Helper self-fill form</b><small>Availability, skills, work preference, video note.</small></div></div>
-          <div class="admin-row"><div class="num">2</div><div><b>Staff review queue</b><small>Approve, correct, translate, or hold for call-back.</small></div></div>
-          <div class="admin-row"><div class="num">3</div><div><b>Public profile updates</b><small>Share link changes once, everywhere.</small></div></div>
-          <div class="admin-row"><div class="num">4</div><div><b>Employer interview request</b><small>Creates a clear task for staff follow-up.</small></div></div>
-        </div>
-      </article>
-    </div>
+  <section id="owner" class="section reveal rule" aria-labelledby="owner-title">
+    <div class="section-head"><div><div class="kicker">店主／後台角度</div><h2 id="owner-title">前台專業，是因為後台流程清楚。</h2></div><p>不要只賣一個漂亮首頁。要讓 Frank 太太覺得：這個網站可以處理她每天面對的外傭資料、客人追問、面試安排和 PDF 過期問題。</p></div>
+    <div class="owner-story"><article class="admin-card"><h3>僱傭中心諮詢畫面</h3><p>專業顧問、文件、名冊、平板查看資料，感覺比西式生活照更接近香港僱傭中心業務。</p><img src="assets/agency-consultation.webp" alt="合成香港僱傭中心諮詢場景"></article><article class="admin-card"><h3>外傭自填 → 職員審核 → 公開更新</h3><div class="admin-flow"><div class="admin-row"><div class="num">01</div><div><b>外傭自填表格</b><small>可上班日期、技能、經驗、工作期望。</small></div></div><div class="admin-row"><div class="num">02</div><div><b>職員審核隊列</b><small>批准、修正、翻譯或暫停公開。</small></div></div><div class="admin-row"><div class="num">03</div><div><b>公開資料更新</b><small>同一條分享連結即時變更。</small></div></div><div class="admin-row"><div class="num">04</div><div><b>僱主面試要求</b><small>成為職員可跟進的清楚任務。</small></div></div></div></article></div>
   </section>
 
-  <section id="map" class="section reveal" aria-labelledby="map-title">
-    <div class="section-head">
-      <div><div class="kicker">Full GoldenWin-like hierarchy preserved</div><h2 id="map-title">Everything exists, but the first impression stays calm.</h2></div>
-      <p>The original feature map is not removed; it is staged elegantly so visitors do not feel dumped into a legacy portal.</p>
-    </div>
-    <div class="map-grid" aria-label="Full platform map">
-      <div class="route-card highlight"><span>01</span><b>Home</b><small>Trust-first concierge homepage.</small></div>
-      <div class="route-card highlight"><span>02</span><b>Search</b><small>Need-based helper matching.</small></div>
-      <div class="route-card"><span>03</span><b>About</b><small>Founder promise, branch and agency story.</small></div>
-      <div class="route-card"><span>04</span><b>Services</b><small>Overseas, direct hire, renewal, documents.</small></div>
-      <div class="route-card"><span>05</span><b>Price</b><small>Packages, renewal, direct-hire fees.</small></div>
-      <div class="route-card"><span>06</span><b>Form</b><small>Downloads, holidays, labour references.</small></div>
-      <div class="route-card"><span>07</span><b>Online Service</b><small>Renewal and upload flow.</small></div>
-      <div class="route-card"><span>08</span><b>Favorites</b><small>Shortlist and compare helpers.</small></div>
-      <div class="route-card highlight"><span>09</span><b>Helper Detail</b><small>Shareable live profile link.</small></div>
-      <div class="route-card"><span>10</span><b>Payment</b><small>FPS/ATM/payment receipt flow.</small></div>
-      <div class="route-card"><span>11</span><b>Account</b><small>Employer info and contract records.</small></div>
-      <div class="route-card"><span>12</span><b>Progress</b><small>Application timeline and status.</small></div>
-      <div class="route-card highlight"><span>13</span><b>Interviews</b><small>Request, confirm and follow up.</small></div>
-      <div class="route-card"><span>14</span><b>Privacy</b><small>Noindex demo legal placeholder.</small></div>
-      <div class="route-card"><span>15</span><b>Terms</b><small>Terms and service conditions.</small></div>
-      <div class="route-card"><span>16</span><b>Sign in / Sign up</b><small>Static auth mock only.</small></div>
-    </div>
+  <section id="map" class="section reveal rule" aria-labelledby="map-title">
+    <div class="section-head"><div><div class="kicker">完整功能地圖</div><h2 id="map-title">功能可以多，但第一眼不能亂。</h2></div><p>GoldenWin 類似的功能結構仍然保留，但以專業平台地圖方式呈現，不讓訪客一進來就像進入舊式 portal。</p></div>
+    <div class="map-grid" aria-label="平台功能地圖"><div class="route-card highlight"><span>01</span><b>首頁</b><small>信任及外傭名冊主視覺。</small></div><div class="route-card highlight"><span>02</span><b>搜尋</b><small>按家庭需要配對外傭。</small></div><div class="route-card"><span>03</span><b>關於我們</b><small>公司、牌照、分店及服務承諾。</small></div><div class="route-card"><span>04</span><b>服務</b><small>海外聘請、完約、續約、文件。</small></div><div class="route-card"><span>05</span><b>收費</b><small>套餐、續約、直接聘請費用。</small></div><div class="route-card"><span>06</span><b>表格下載</b><small>假期、勞工處、文件參考。</small></div><div class="route-card"><span>07</span><b>網上服務</b><small>續約及文件上載流程。</small></div><div class="route-card"><span>08</span><b>收藏</b><small>外傭 shortlist 及比較。</small></div><div class="route-card highlight"><span>09</span><b>外傭詳情</b><small>可分享的即時個人頁。</small></div><div class="route-card"><span>10</span><b>付款</b><small>FPS／ATM／收據上載。</small></div><div class="route-card"><span>11</span><b>帳戶</b><small>僱主資料及合約紀錄。</small></div><div class="route-card"><span>12</span><b>進度</b><small>申請及文件處理狀態。</small></div><div class="route-card highlight"><span>13</span><b>面試</b><small>預約、確認、職員跟進。</small></div><div class="route-card"><span>14</span><b>私隱</b><small>示範頁 noindex 及私隱提示。</small></div><div class="route-card"><span>15</span><b>條款</b><small>服務條款及免責聲明。</small></div><div class="route-card"><span>16</span><b>登入／登記</b><small>靜態登入概念，非真系統。</small></div></div>
   </section>
 
-  <section id="contact" class="section reveal" aria-labelledby="contact-title">
-    <div class="cta-band">
-      <div>
-        <div class="kicker">CTA/contact concept</div>
-        <h2 id="contact-title">Ready to request an interview?</h2>
-        <p class="section-intro">The CTA uses service language: tell us your need, share a profile, and let staff confirm the right next step. This feels safer than a generic “submit” or ecommerce-like checkout.</p>
-        <div class="cta"><button class="btn jade" type="button">Request guided interview</button><button class="btn light" type="button">Send profile to family</button></div>
-      </div>
-      <div class="contact-card" aria-label="Contact summary">
-        <div class="row"><span>Demo status</span><b>Static prototype</b></div>
-        <div class="row"><span>Data</span><b>Synthetic only</b></div>
-        <div class="row"><span>Best mobile action</span><b>Search → Profile → Interview</b></div>
-        <div class="row"><span>Future backend</span><b>CRM / live helper admin</b></div>
-      </div>
-    </div>
+  <section id="contact" class="section reveal rule" aria-labelledby="contact-title">
+    <div class="cta-band"><div><div class="kicker">預約面試</div><h2 id="contact-title">選好外傭後，由職員確認下一步。</h2><p class="section-intro">按鈕不用「提交」或購物車語氣，而是香港僱傭中心應有的服務語氣：預約面試、分享資料、職員跟進。</p><div class="cta"><button class="btn green" type="button">預約職員跟進</button><button class="btn light" type="button">分享外傭資料給家人</button></div></div><div class="contact-card" aria-label="示範狀態"><div class="row"><span>示範狀態</span><b>靜態示範</b></div><div class="row"><span>資料來源</span><b>全部合成</b></div><div class="row"><span>手機主流程</span><b>搜尋 → 詳情 → 面試</b></div><div class="row"><span>未來後台</span><b>客戶及外傭資料管理</b></div></div></div>
   </section>
 
-  <section id="notes" class="fineprint" aria-label="Safety notes">
-    <p><b>Private preview notes:</b> no GoldenWin/Sunny proprietary code, logo, images or real helper records are used; no real helper records appear. Existing visuals are commercial-safe synthetic placeholders generated for this repo. This is a static counter-copy prototype for design direction only, with no real forms, no payment, no account login and no backend submission.</p>
-    <p>Hard-to-discover pattern preserved: random repo/folder path, no hub links, root decoy page, robots disallow and noindex/nofollow/noarchive meta tag.</p>
-  </section>
+  <section id="notes" class="fineprint" aria-label="安全說明"><p><b>私人示範說明：</b>本頁沒有使用 GoldenWin / Sunny 的專有程式碼、標誌、圖片或真實外傭紀錄；所有人物相片及資料均為合成，只作設計方向參考。此頁沒有真表格提交、付款、登入或後台。</p><p>保留不易被隨機發現的模式：隨機儲存庫及資料夾、根目錄假頁、搜尋引擎封鎖及不收錄設定。</p></section>
 </main>
 <script>
 const routeMap={home:'home',search:'search',detail:'detail',owner:'owner',map:'map',contact:'contact',trust:'trust'};
 const navLinks=[...document.querySelectorAll('[data-route]')];
 function currentRoute(){const raw=(location.hash||'#/home').replace(/^#\/?/,'').split('/')[0]||'home';return routeMap[raw]?raw:'home'}
-function applyRoute(){const route=currentRoute();navLinks.forEach(a=>a.classList.toggle('active',a.dataset.route===route));const target=document.getElementById(routeMap[route]);if(target){setTimeout(()=>target.scrollIntoView({block:'start'}),30)}document.title=(route==='search'?'Live helper search':route==='detail'?'Shareable helper profile':'Sunny Helper Concierge')+' — Private Counter-Copy Preview'}
+function applyRoute(){const route=currentRoute();navLinks.forEach(a=>a.classList.toggle('active',a.dataset.route===route));const target=document.getElementById(routeMap[route]);if(target){setTimeout(()=>target.scrollIntoView({block:'start'}),30)}const titles={home:'專業僱傭中心示範',search:'外傭即時名冊',detail:'外傭即時詳情',owner:'後台流程',map:'功能地圖',contact:'預約面試'};document.title=(titles[route]||'專業僱傭中心示範')+'｜私人示範'}
 const io='IntersectionObserver' in window?new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.12}):null;
 document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('in'));
-window.addEventListener('hashchange',applyRoute);
-window.addEventListener('load',applyRoute);
+window.addEventListener('hashchange',applyRoute);window.addEventListener('load',applyRoute);
 </script>
 </body>
 </html>
