@@ -2,58 +2,348 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>GoldenWin Counter Concept — Private Preview</title>
+<meta name="description" content="Private noindex counter-copy prototype for a premium Hong Kong helper agency journey. Synthetic data only.">
+<title>Sunny Helper Concierge — Private Counter-Copy Preview</title>
 <style>
-:root{--ink:#090909;--paper:#fbf6ec;--cream:#fffaf0;--gold:#c69a45;--gold2:#f4d58b;--red:#b33a2f;--green:#1d6956;--muted:#756d61;--line:rgba(20,16,10,.12);--shadow:0 24px 80px rgba(30,20,5,.14);--radius:26px;--font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans TC",sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:var(--font);color:var(--ink);background:radial-gradient(circle at 12% -10%,#fff3cd 0,transparent 28%),radial-gradient(circle at 80% 0,#ffd7cf 0,transparent 24%),linear-gradient(135deg,#fffaf2,#f4ead9 58%,#efe2cc);min-height:100vh;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.privacy{position:fixed;z-index:99;left:14px;bottom:14px;background:rgba(8,8,8,.78);color:#fff;border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(16px);border-radius:999px;padding:9px 14px;font-size:11px;letter-spacing:.08em;text-transform:uppercase}.shell{display:grid;grid-template-columns:290px minmax(0,1fr);min-height:100vh}.side{position:sticky;top:0;height:100vh;padding:22px;border-right:1px solid rgba(20,16,10,.08);background:rgba(255,250,240,.74);backdrop-filter:blur(24px);display:flex;flex-direction:column;gap:18px}.brand{display:flex;align-items:center;gap:12px;padding:12px;border-radius:22px;background:#101010;color:#fff;box-shadow:var(--shadow)}.mark{width:46px;height:46px;border-radius:16px;background:linear-gradient(135deg,var(--gold2),var(--gold) 55%,#8b5c18);display:grid;place-items:center;color:#1a1205;font-weight:950;letter-spacing:-.08em}.brand small{display:block;color:#d6c4a4;font-size:10px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:3px}.brand b{font-size:15px;line-height:1.1}.nav{display:grid;gap:6px}.nav a{display:flex;align-items:center;justify-content:space-between;padding:12px 13px;border-radius:16px;color:#33291b;font-weight:760;font-size:13px;transition:.25s}.nav a span{opacity:.46;font-weight:900}.nav a:hover,.nav a.active{background:#fff;box-shadow:0 10px 34px rgba(60,40,10,.1);transform:translateX(2px)}.side-note{margin-top:auto;border:1px solid var(--line);border-radius:22px;padding:16px;background:rgba(255,255,255,.58)}.side-note b{display:block;margin-bottom:6px}.side-note p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}.main{min-width:0}.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,4vw,54px);background:linear-gradient(180deg,rgba(251,246,236,.92),rgba(251,246,236,.7));backdrop-filter:blur(18px);border-bottom:1px solid rgba(20,16,10,.08)}.crumb{font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#856b36}.actions{display:flex;gap:10px;align-items:center}.pill{border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:rgba(255,255,255,.56);font-weight:800;font-size:12px}.pill.dark{background:#111;color:#fff;border-color:#111}.view{padding:34px clamp(20px,4vw,54px) 90px}.hero{min-height:calc(100vh - 120px);display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:34px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(198,154,69,.35);background:rgba(255,255,255,.5);border-radius:999px;padding:9px 14px;color:#806026;font-weight:950;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px var(--gold)}h1{font-size:clamp(46px,8vw,112px);line-height:.86;margin:22px 0 0;letter-spacing:-.08em;max-width:850px}.gold{background:linear-gradient(110deg,#120d03,#9d6d17 48%,#f1cc73);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:680px;color:#655c4f;font-size:17px;line-height:1.8;margin:24px 0 0}.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{border:0;border-radius:999px;padding:15px 22px;background:#111;color:#fff;font-weight:950;letter-spacing:.04em;cursor:pointer;box-shadow:0 14px 36px rgba(0,0,0,.18);transition:.25s}.btn:hover{transform:translateY(-2px)}.btn.light{background:#fff;color:#17120b;border:1px solid var(--line)}.hero-card{position:relative;border-radius:36px;padding:22px;background:linear-gradient(145deg,rgba(255,255,255,.8),rgba(255,255,255,.36));border:1px solid rgba(255,255,255,.7);box-shadow:var(--shadow);overflow:hidden}.hero-card:before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 90deg,var(--gold),transparent,var(--red),transparent,var(--green),var(--gold));opacity:.12;filter:blur(28px);animation:spin 16s linear infinite}.phone{position:relative;border:10px solid #14110c;border-radius:42px;background:#111;overflow:hidden;box-shadow:0 35px 90px rgba(0,0,0,.32);min-height:640px}.screen{position:absolute;inset:0;background:linear-gradient(#fbf5e8,#e9dcc6);color:#17120b;padding:22px;overflow:hidden}.mock-top{display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:900}.mock-search{margin:28px 0 14px;background:#fff;border-radius:22px;padding:18px;box-shadow:0 14px 35px rgba(70,50,20,.14)}.mock-search b{font-size:24px}.mock-filters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.chip{background:#f4ead8;border:1px solid #ead8b8;border-radius:999px;padding:9px 12px;font-size:12px;font-weight:850}.maid-list{display:grid;gap:12px}.maid-card{display:grid;grid-template-columns:80px 1fr;gap:13px;background:#fff;border-radius:24px;padding:12px;box-shadow:0 12px 30px rgba(60,40,10,.1)}.avatar{height:90px;border-radius:18px;background:linear-gradient(145deg,#26221a,#c99b47);display:grid;place-items:center;color:#fff;font-weight:950;font-size:25px}.maid-card b{display:block}.maid-card p{margin:5px 0;color:#756d61;font-size:12px;line-height:1.45}.status{display:inline-block;border-radius:999px;padding:5px 8px;background:#e8f6ef;color:#166246;font-size:10px;font-weight:950;text-transform:uppercase}.section-title{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}.section-title h2{font-size:clamp(34px,4vw,58px);letter-spacing:-.055em;margin:0}.section-title p{margin:0;color:var(--muted);max-width:520px;line-height:1.65}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.panel{background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.74);border-radius:var(--radius);padding:22px;box-shadow:0 18px 70px rgba(60,40,10,.08);position:relative;overflow:hidden}.panel h3{font-size:21px;margin:0 0 8px;letter-spacing:-.02em}.panel p,.panel li{color:#655c4f;line-height:1.7}.panel ul{padding-left:18px;margin:12px 0 0}.label{display:inline-flex;background:#111;color:#fff;border-radius:999px;padding:7px 10px;font-size:10px;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}.form-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}.field{background:#fff;border:1px solid #eadfca;border-radius:18px;padding:14px}.field label{display:block;font-size:11px;font-weight:950;color:#876b31;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}.field input,.field select{border:0;outline:0;width:100%;background:transparent;color:#22180c;font-weight:800}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.profile{background:#fff;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.8)}.profile-art{height:170px;background:radial-gradient(circle at 30% 25%,#fff4c2,transparent 28%),linear-gradient(135deg,#17130e,#c59945);display:grid;place-items:center;color:#fff;font-size:48px;font-weight:950}.profile-body{padding:18px}.meta{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.meta span{border:1px solid #eadfca;background:#fff8ed;border-radius:999px;padding:7px 9px;font-size:11px;font-weight:850}.price{font-size:46px;font-weight:950;letter-spacing:-.06em;color:#1a1206}.timeline{display:grid;gap:12px}.step{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start}.num{width:42px;height:42px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-weight:950}.map{height:340px;border-radius:30px;background:radial-gradient(circle at 20% 30%,#ffe2a2,transparent 10%),radial-gradient(circle at 65% 45%,#ffcfc8,transparent 9%),radial-gradient(circle at 82% 68%,#c7eadc,transparent 10%),linear-gradient(135deg,#f3e2c5,#e8d2ae);position:relative;overflow:hidden}.map:after{content:"";position:absolute;inset:35px;border:2px dashed rgba(80,50,10,.25);border-radius:45% 55% 50% 40%;transform:rotate(-15deg)}.branch{position:absolute;background:#111;color:#fff;border-radius:999px;padding:9px 11px;font-size:11px;font-weight:950;box-shadow:0 12px 30px rgba(0,0,0,.22)}.b1{left:50px;top:60px}.b2{left:220px;top:110px}.b3{right:70px;top:170px}.b4{left:150px;bottom:65px}.table{width:100%;border-collapse:collapse;background:#fff;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}.table th,.table td{text-align:left;padding:15px;border-bottom:1px solid #efe5d1}.table th{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#876b31;background:#fff7e8}.table td{color:#473d30;font-weight:700}.notice{background:#fff3d6;border:1px solid #efd290;border-radius:22px;padding:18px;margin:18px 0;color:#604817}.hidden{display:none!important}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:980px){.shell{display:block}.side{position:relative;height:auto}.nav{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.phone{min-height:560px}.grid,.cards{grid-template-columns:1fr}.form-row{grid-template-columns:1fr 1fr}.topbar{position:relative}}@media(max-width:560px){h1{font-size:48px}.form-row{grid-template-columns:1fr}.nav{grid-template-columns:1fr}.actions{display:none}.view{padding-left:16px;padding-right:16px}.side{padding:14px}.phone{min-height:520px}.maid-card{grid-template-columns:60px 1fr}.avatar{height:68px}.privacy{display:none}}
+:root{
+  --porcelain:#fbf8f0;
+  --paper:#fffdf7;
+  --linen:#efe5d2;
+  --ink:#14221f;
+  --soft-ink:#40504b;
+  --muted:#76817c;
+  --jade:#2f6759;
+  --jade-2:#1f4c42;
+  --gold:#b88a41;
+  --gold-2:#e0bf73;
+  --blush:#f3d6c6;
+  --mist:#edf4ee;
+  --line:rgba(37,58,52,.14);
+  --shadow:0 24px 70px rgba(45,42,30,.12);
+  --tight-shadow:0 14px 38px rgba(45,42,30,.12);
+  --radius:28px;
+  --radius-sm:18px;
+  --display:Georgia,"Times New Roman",serif;
+  --body:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans TC",sans-serif;
+  --mono:"SFMono-Regular","Roboto Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--porcelain)}
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:var(--body);
+  background:
+    radial-gradient(circle at 12% 0%,rgba(243,214,198,.7) 0 18rem,transparent 24rem),
+    radial-gradient(circle at 92% 10%,rgba(224,191,115,.34) 0 18rem,transparent 26rem),
+    linear-gradient(180deg,#fffdf8 0%,#f6efe2 48%,#fbf8f0 100%);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+img{max-width:100%;display:block}
+.skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{left:16px;top:16px;width:auto;height:auto;background:var(--ink);color:#fff;padding:12px 16px;border-radius:12px;z-index:999}
+.privacy{
+  position:fixed;z-index:90;left:14px;bottom:14px;
+  background:#14221f;color:#fff;border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;padding:9px 13px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  box-shadow:0 12px 28px rgba(0,0,0,.18)
+}
+.shell{width:min(1180px,calc(100% - 28px));margin:0 auto}
+.topbar{
+  position:sticky;top:10px;z-index:80;margin:10px auto 0;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:10px 10px 10px 14px;border:1px solid var(--line);border-radius:999px;
+  background:rgba(255,253,247,.94);box-shadow:0 10px 34px rgba(54,47,32,.09)
+}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.mark{
+  width:40px;height:40px;border-radius:14px;display:grid;place-items:center;flex:0 0 auto;
+  color:#fff;background:linear-gradient(135deg,var(--jade),var(--jade-2));font-weight:900;letter-spacing:-.04em;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)
+}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.brand b{display:block;font-size:14px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:38vw}
+.nav{display:flex;align-items:center;gap:4px;overflow:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{padding:10px 12px;border-radius:999px;font-size:12px;font-weight:760;color:#52615c;white-space:nowrap;transition:background .2s,color .2s,transform .2s}
+.nav a:hover,.nav a.active{background:var(--ink);color:#fff;transform:translateY(-1px)}
+.nav a.primary{background:var(--jade);color:#fff}
+.section{padding:78px 0;scroll-margin-top:92px}
+.hero{padding:48px 0 80px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(330px,.82fr);gap:36px;align-items:center;min-height:calc(100vh - 70px)}
+.eyebrow{display:flex;align-items:center;gap:9px;margin-bottom:18px;color:var(--jade);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.eyebrow:before{content:"";width:38px;height:1px;background:var(--gold)}
+h1,h2,h3,p{margin-top:0}
+h1{font-family:var(--display);font-size:clamp(3.1rem,8.7vw,7.8rem);line-height:.88;letter-spacing:-.065em;margin-bottom:24px;max-width:920px}
+h1 em{font-style:italic;color:var(--jade);letter-spacing:-.055em}
+.lead{font-size:clamp(1.05rem,2vw,1.28rem);line-height:1.65;color:var(--soft-ink);max-width:680px;margin-bottom:28px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 30px}
+.proof-pill{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 13px;box-shadow:0 9px 24px rgba(58,49,34,.06);font-size:13px;color:#44544f;font-weight:720}
+.dot{width:8px;height:8px;border-radius:999px;background:var(--jade);box-shadow:0 0 0 5px rgba(47,103,89,.1)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{border:0;border-radius:999px;background:var(--ink);color:#fff;padding:14px 20px;font-weight:850;box-shadow:0 12px 30px rgba(20,34,31,.18);display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;min-height:48px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(20,34,31,.22)}
+.btn.jade{background:var(--jade)}
+.btn.light{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 10px 26px rgba(45,42,30,.08)}
+.hero-card{position:relative}
+.photo-frame{position:relative;border-radius:38px;overflow:hidden;background:#eadcc5;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.78)}
+.photo-frame img{width:100%;aspect-ratio:4/5.35;object-fit:cover;object-position:center}
+.photo-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0) 48%,rgba(20,34,31,.58) 100%)}
+.compass-card{
+  position:absolute;left:-26px;right:20px;bottom:22px;background:#fffdf7;color:var(--ink);
+  border-radius:26px;padding:18px;border:1px solid rgba(255,255,255,.72);box-shadow:0 18px 48px rgba(32,27,16,.18)
+}
+.compass-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.compass-top strong{font-family:var(--display);font-size:22px;letter-spacing:-.035em}.compass-top span{font:700 11px var(--mono);color:var(--jade);letter-spacing:.08em;text-transform:uppercase}
+.compass-line{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.compass-line div{border:1px solid var(--line);border-radius:16px;padding:10px 8px;background:#fbf8f0;min-height:74px}
+.compass-line b{display:block;font-size:11px;margin-bottom:5px}.compass-line small{display:block;color:var(--muted);font-size:10px;line-height:1.35}
+.section-head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(260px,.42fr);gap:28px;align-items:end;margin-bottom:28px}
+.kicker{color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+h2{font-family:var(--display);font-size:clamp(2rem,4.8vw,4.45rem);line-height:.96;letter-spacing:-.055em;margin-bottom:12px}.section-head p,.section-intro{color:var(--soft-ink);line-height:1.65;font-size:1.02rem}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.trust-card,.panel,.helper-card,.field,.admin-card,.profile-sheet,.route-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 12px 34px rgba(52,46,32,.075)}
+.trust-card{padding:22px;min-height:210px}.icon{width:46px;height:46px;border-radius:18px;background:var(--mist);display:grid;place-items:center;color:var(--jade);font-size:21px;margin-bottom:18px}.trust-card h3,.panel h3,.admin-card h3,.helper-card h3{font-size:1.04rem;margin-bottom:8px;letter-spacing:-.015em}.trust-card p,.panel p,.admin-card p,.helper-card p{color:var(--muted);line-height:1.55;font-size:.94rem;margin-bottom:0}.trust-card b{display:block;margin-top:16px;color:var(--jade);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.journey{position:relative;background:linear-gradient(135deg,#162621,#2f6759);color:#fff;border-radius:38px;padding:34px;overflow:hidden;box-shadow:var(--shadow)}
+.journey:before{content:"";position:absolute;inset:auto -8% -28% auto;width:48%;height:90%;border-radius:999px;background:rgba(224,191,115,.16);filter:blur(0)}
+.journey .section-head{grid-template-columns:1fr .45fr;position:relative;z-index:1}.journey .kicker{color:var(--gold-2)}.journey h2{color:#fff}.journey .section-head p{color:rgba(255,255,255,.74)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;position:relative;z-index:1}.step{background:rgba(255,253,247,.08);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:17px;min-height:154px}.step span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:999px;background:#fff;color:var(--jade);font-weight:900;margin-bottom:18px}.step h3{margin-bottom:8px;color:#fff;font-size:.98rem}.step p{color:rgba(255,255,255,.72);line-height:1.45;font-size:.88rem;margin-bottom:0}
+.search-stage{display:grid;grid-template-columns:.86fr 1.14fr;gap:22px;align-items:start}.search-console{background:#fff;border:1px solid var(--line);border-radius:34px;padding:24px;box-shadow:var(--shadow);position:sticky;top:100px}.search-console h3{font-family:var(--display);font-size:2rem;letter-spacing:-.05em;margin-bottom:9px}.search-console p{color:var(--soft-ink);line-height:1.56}.need-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.field{padding:13px;border-radius:18px;box-shadow:none;background:#fbf8f0}.field label{display:block;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--jade);margin-bottom:8px}.field select,.field input{width:100%;border:0;background:transparent;color:var(--ink);outline:0;font-weight:760}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.chip{border:1px solid var(--line);border-radius:999px;padding:8px 10px;background:#fff;color:#4c5a55;font-size:12px;font-weight:760}.chip.active{background:var(--jade);color:#fff;border-color:var(--jade)}.mini-note{display:flex;gap:10px;align-items:flex-start;background:#f7f0df;border:1px dashed rgba(184,138,65,.45);border-radius:18px;padding:13px;color:#5d5140;font-size:13px;line-height:1.45}.mini-note b{color:var(--jade)}
+.helper-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.helper-card{overflow:hidden;border-radius:30px;transition:transform .2s,box-shadow .2s}.helper-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.helper-art{height:150px;background:linear-gradient(135deg,#f1e3ca,#f9f3e8);position:relative;overflow:hidden}.helper-art:before{content:"";position:absolute;inset:18px;border-radius:999px;background:radial-gradient(circle at 50% 30%,#d7c3a2 0 18%,#b9a17a 19% 28%,transparent 29%),linear-gradient(180deg,transparent 0 34%,rgba(47,103,89,.18) 35% 100%);opacity:.72}.helper-art:after{content:attr(data-initial);position:absolute;right:18px;bottom:10px;font-family:var(--display);font-size:76px;color:rgba(20,34,31,.08);font-weight:700}.helper-body{padding:18px}.status-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.status{display:inline-flex;align-items:center;gap:7px;background:#eef6f2;color:var(--jade);font-size:11px;font-weight:900;padding:7px 9px;border-radius:999px}.status:before{content:"";width:7px;height:7px;border-radius:999px;background:currentColor}.updated{font:700 10px var(--mono);color:var(--muted)}.helper-card h3{font-size:1.18rem;margin-bottom:7px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}.tags span{background:#f4eddc;border:1px solid rgba(184,138,65,.18);border-radius:999px;padding:6px 8px;font-size:11px;color:#604f35;font-weight:760}.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.card-actions .btn{min-height:42px;padding:10px 12px;font-size:12px}.card-actions .btn.light{box-shadow:none}
+.profile-layout{display:grid;grid-template-columns:.84fr 1.16fr;gap:22px}.profile-sheet{padding:26px;background:linear-gradient(180deg,#fffdf7,#fbf4e6)}.profile-code{font:800 12px var(--mono);color:var(--gold);letter-spacing:.08em;text-transform:uppercase}.profile-sheet h2{font-size:clamp(2.4rem,5vw,4.8rem);margin:10px 0}.profile-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:20px 0}.fact{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px}.fact small{display:block;color:var(--muted);font-size:11px;margin-bottom:5px}.fact b{font-size:14px}.timeline{display:grid;gap:12px}.timeline-step{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start}.num{width:42px;height:42px;border-radius:999px;background:var(--jade);color:#fff;display:grid;place-items:center;font-weight:900}.timeline-step .panel{padding:17px;border-radius:20px;box-shadow:0 8px 20px rgba(45,42,30,.06)}
+.owner-story{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}.admin-card{padding:24px;position:relative;overflow:hidden}.admin-card img{border-radius:24px;aspect-ratio:16/10;object-fit:cover;margin-top:18px;border:1px solid var(--line)}.admin-flow{display:grid;gap:10px}.admin-row{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px}.admin-row .num{background:#f5edda;color:var(--jade)}.admin-row b{display:block}.admin-row small{color:var(--muted)}
+.map-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.route-card{padding:16px;border-radius:20px;box-shadow:none;min-height:124px}.route-card span{display:block;font:900 11px var(--mono);color:var(--gold);margin-bottom:14px}.route-card b{display:block;margin-bottom:8px}.route-card small{color:var(--muted);line-height:1.35;display:block}.route-card.highlight{background:var(--ink);color:#fff}.route-card.highlight small{color:rgba(255,255,255,.7)}.route-card.highlight span{color:var(--gold-2)}
+.cta-band{display:grid;grid-template-columns:1fr .72fr;gap:22px;background:#fff;border:1px solid var(--line);border-radius:42px;padding:34px;box-shadow:var(--shadow);align-items:center}.cta-band h2{font-size:clamp(2rem,4.4vw,4.2rem)}.contact-card{background:#f6efe2;border-radius:30px;padding:22px;border:1px solid rgba(184,138,65,.18)}.contact-card .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(37,58,52,.12);padding:12px 0}.contact-card .row:last-child{border-bottom:0}.contact-card span{color:var(--muted)}.contact-card b{text-align:right}.fineprint{padding:34px 0 84px;color:var(--muted);font-size:12px;line-height:1.55}.fineprint a{text-decoration:underline;text-decoration-color:rgba(118,129,124,.45)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:3px solid rgba(47,103,89,.38);outline-offset:3px}
+@media (max-width:980px){
+  .shell{width:min(100% - 22px,760px)}
+  .topbar{border-radius:24px;align-items:flex-start;flex-direction:column}.nav{width:100%;padding-bottom:2px}.brand b{max-width:none}
+  .hero{grid-template-columns:1fr;gap:24px;min-height:auto;padding-top:34px}.photo-frame img{aspect-ratio:4/4.75}.compass-card{position:relative;left:auto;right:auto;bottom:auto;margin:-42px 14px 0}.section-head,.journey .section-head,.search-stage,.profile-layout,.owner-story,.cta-band{grid-template-columns:1fr}.trust-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.journey{padding:24px}.search-console{position:relative;top:auto}.map-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:620px){
+  .privacy{left:10px;right:10px;text-align:center;padding:8px 10px}.section{padding:58px 0;scroll-margin-top:138px}h1{font-size:clamp(3rem,16vw,4.9rem)}.lead{font-size:1rem}.hero-proof{gap:8px}.proof-pill{font-size:12px;padding:8px 10px}.trust-grid,.helper-list,.need-grid,.profile-facts,.map-grid{grid-template-columns:1fr}.compass-line{grid-template-columns:1fr 1fr}.photo-frame{border-radius:30px}.helper-art{height:132px}.card-actions{grid-template-columns:1fr}.cta .btn{width:100%}.cta-band,.journey{border-radius:30px}.route-card{min-height:auto}.fineprint{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
-<body>
-<div class="privacy">unlisted preview · noindex · synthetic data</div>
-<div class="shell">
-  <aside class="side">
-    <div class="brand"><div class="mark">GW</div><div><small>Counter Concept</small><b>Golden Win<br>Service Platform</b></div></div>
-    <nav class="nav" id="nav"></nav>
-    <div class="side-note"><b>Hierarchy copied, assets not copied.</b><p>This is a static counter-copy prototype: same information architecture, modernized interface, synthetic helper data, no backend actions.</p></div>
-  </aside>
-  <main class="main">
-    <div class="topbar"><div><div class="crumb" id="crumb">Private Preview</div></div><div class="actions"><a class="pill" href="#/signin">Sign in</a><a class="pill dark" href="#/search">Find Helper</a></div></div>
-    <div class="view" id="view"></div>
-  </main>
-</div>
+<body data-feature="live-updated-profiles guided-interviews helper-self-update shareable-helper-detail premium-concierge-search">
+<a class="skip" href="#main">Skip to content</a>
+<div class="privacy">private noindex preview · synthetic helper data</div>
+<header class="shell topbar" aria-label="Preview navigation">
+  <a class="brand" href="#/home" aria-label="Sunny Helper Concierge home">
+    <span class="mark">S</span>
+    <span><small>Counter-copy demo</small><b>Sunny Helper Concierge</b></span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Sections">
+    <a href="#/home" data-route="home">Home</a>
+    <a href="#/search" data-route="search" class="primary">Search</a>
+    <a href="#/detail" data-route="detail">Live profile</a>
+    <a href="#/owner" data-route="owner">Owner flow</a>
+    <a href="#/map" data-route="map">Full map</a>
+    <a href="#/contact" data-route="contact">Interview</a>
+  </nav>
+</header>
+<main id="main" class="shell">
+  <section id="home" class="hero section reveal" aria-labelledby="hero-title">
+    <div>
+      <div class="eyebrow">Hong Kong family-care agency prototype</div>
+      <h1 id="hero-title">Find the right helper faster — with <em>live updated profiles.</em></h1>
+      <p class="lead">A warmer, more convincing counter-copy direction for GoldenWin / Sunny: not a cold database first, but a calm service journey that helps a busy family trust the agency, search quickly, share one live profile, and request an interview with confidence.</p>
+      <div class="hero-proof" aria-label="Trust promises">
+        <span class="proof-pill"><span class="dot"></span> Updated status visible</span>
+        <span class="proof-pill"><span class="dot"></span> Guided interview request</span>
+        <span class="proof-pill"><span class="dot"></span> Shareable helper profile</span>
+        <span class="proof-pill"><span class="dot"></span> Staff follow-up after click</span>
+      </div>
+      <div class="cta">
+        <a class="btn jade" href="#/search">Start with care need</a>
+        <a class="btn light" href="#/detail">View live profile concept</a>
+      </div>
+    </div>
+    <div class="hero-card" aria-label="Family care visual">
+      <figure class="photo-frame">
+        <img src="assets/hero-care.webp" alt="Synthetic warm editorial scene of a caregiver supporting an elderly Hong Kong family member">
+      </figure>
+      <div class="compass-card" aria-label="Care compass">
+        <div class="compass-top"><strong>Care compass</strong><span>less noise · more trust</span></div>
+        <div class="compass-line">
+          <div><b>Need</b><small>Baby, elder, cooking, pets, timetable</small></div>
+          <div><b>Match</b><small>Only profiles that fit first</small></div>
+          <div><b>Interview</b><small>Clear next step, not a cold cart</small></div>
+          <div><b>Track</b><small>Status updates after request</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust" class="section reveal" aria-labelledby="trust-title">
+    <div class="section-head">
+      <div><div class="kicker">Why this feels safer</div><h2 id="trust-title">Beauty here means reducing anxiety.</h2></div>
+      <p>A maid-agency site wins when the family immediately feels: “the records are current, the agency is organized, and I know what happens next.” The design uses calm spacing, human language, and proof before filters.</p>
+    </div>
+    <div class="trust-grid">
+      <article class="trust-card"><div class="icon">✓</div><h3>Updated profiles</h3><p>Every card shows last update and reviewed fields, solving the outdated-PDF mismatch problem.</p><b>Trust cue</b></article>
+      <article class="trust-card"><div class="icon">☎</div><h3>Human follow-up</h3><p>Interview buttons are framed as guided consultation, not checkout. Staff contact remains central.</p><b>Warmth cue</b></article>
+      <article class="trust-card"><div class="icon">↗</div><h3>Shareable link</h3><p>One live helper profile can be sent to spouse/family; no stale file copies floating around WhatsApp.</p><b>Speed cue</b></article>
+      <article class="trust-card"><div class="icon">◎</div><h3>Clear process</h3><p>Before asking for forms/payment, the page explains the next steps and gives families control.</p><b>Safety cue</b></article>
+    </div>
+  </section>
+
+  <section class="section reveal" aria-label="End-user journey">
+    <div class="journey">
+      <div class="section-head">
+        <div><div class="kicker">End-user journey</div><h2>Show less first. Earn the search.</h2></div>
+        <p>The database appears after the visitor understands the promise. This makes the owner look more professional while still proving the search can be fast.</p>
+      </div>
+      <div class="steps">
+        <article class="step"><span>1</span><h3>Tell us your care need</h3><p>Plain language: baby, elderly, cooking, pet, start date.</p></article>
+        <article class="step"><span>2</span><h3>Review matched helpers</h3><p>Small shortlist first, deeper filters only when needed.</p></article>
+        <article class="step"><span>3</span><h3>Share live profile</h3><p>One link stays current after staff review.</p></article>
+        <article class="step"><span>4</span><h3>Request interview</h3><p>Family sends intent; agency confirms details.</p></article>
+        <article class="step"><span>5</span><h3>Track next steps</h3><p>Application progress replaces “please call again” uncertainty.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="search" class="section reveal" aria-labelledby="search-title">
+    <div class="section-head">
+      <div><div class="kicker">Need-based search</div><h2 id="search-title">A fast search that does not feel like a spreadsheet.</h2></div>
+      <p>Designed for a mobile Hong Kong employer: answer a few human questions first, then see only relevant profiles with update status, verified fields, share link and interview CTA.</p>
+    </div>
+    <div class="search-stage">
+      <aside class="search-console" aria-label="Search controls">
+        <h3>What kind of help do you need?</h3>
+        <p>Choose the situation first. Fine filters can expand later; the first screen stays calm.</p>
+        <div class="need-grid">
+          <div class="field"><label for="need">Care need</label><select id="need"><option>Newborn / child care</option><option>Elderly care</option><option>Cooking focus</option><option>Pet-friendly household</option></select></div>
+          <div class="field"><label for="start">Start date</label><select id="start"><option>Within 2 weeks</option><option>This month</option><option>Flexible</option></select></div>
+          <div class="field"><label for="livein">Living</label><select id="livein"><option>Live-in helper</option><option>Finish contract</option><option>Overseas applicant</option></select></div>
+          <div class="field"><label for="code">Known code</label><input id="code" value="SUN-PH-" aria-label="Known helper code"></div>
+        </div>
+        <div class="chips" aria-label="Quick filters">
+          <span class="chip active">Updated this week</span><span class="chip">Can cook Chinese food</span><span class="chip">Elderly care</span><span class="chip">Interview ready</span><span class="chip">Shareable video</span>
+        </div>
+        <div class="mini-note"><span>✦</span><span><b>Owner value:</b> this can later connect to a 50-helper live database, while the public UI stays simple and premium.</span></div>
+      </aside>
+      <div class="helper-list" aria-label="Synthetic helper cards">
+        <article class="helper-card"><div class="helper-art" data-initial="M"></div><div class="helper-body"><div class="status-row"><span class="status">Available</span><span class="updated">Updated Jul 06</span></div><h3>Mara · 31</h3><p>Synthetic profile SUN-PH-2601. Warm childcare experience, cooking basics, available for guided interview.</p><div class="tags"><span>Newborn care</span><span>Cooking</span><span>English</span></div><div class="card-actions"><a class="btn light" href="#/detail">Share profile</a><a class="btn jade" href="#/contact">Request interview</a></div></div></article>
+        <article class="helper-card"><div class="helper-art" data-initial="A"></div><div class="helper-body"><div class="status-row"><span class="status">Interview ready</span><span class="updated">Updated Jul 05</span></div><h3>Ana · 36</h3><p>Synthetic profile SUN-PH-2602. Elderly care, medication reminders, careful household routines.</p><div class="tags"><span>Elderly care</span><span>Cleaning</span><span>Cantonese basic</span></div><div class="card-actions"><a class="btn light" href="#/detail">Share profile</a><a class="btn jade" href="#/contact">Request interview</a></div></div></article>
+        <article class="helper-card"><div class="helper-art" data-initial="L"></div><div class="helper-body"><div class="status-row"><span class="status">Available</span><span class="updated">Updated Jul 04</span></div><h3>Lina · 28</h3><p>Synthetic profile SUN-PH-2603. Pet-friendly, groceries, cooking, and tidy routines for busy family homes.</p><div class="tags"><span>Pets</span><span>Marketing trips</span><span>Cooking</span></div><div class="card-actions"><a class="btn light" href="#/detail">Share profile</a><a class="btn jade" href="#/contact">Request interview</a></div></div></article>
+        <article class="helper-card"><div class="helper-art" data-initial="R"></div><div class="helper-body"><div class="status-row"><span class="status">Staff reviewed</span><span class="updated">Updated Jul 03</span></div><h3>Rhea · 34</h3><p>Synthetic profile SUN-PH-2604. Finish-contract style record, school run support and family cooking.</p><div class="tags"><span>Child care</span><span>School run</span><span>HK experience</span></div><div class="card-actions"><a class="btn light" href="#/detail">Share profile</a><a class="btn jade" href="#/contact">Request interview</a></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="detail" class="section reveal" aria-labelledby="detail-title">
+    <div class="section-head">
+      <div><div class="kicker">Shareable profile route</div><h2 id="detail-title">One live helper detail page, not five stale PDFs.</h2></div>
+      <p>This route demonstrates the client’s key need: a shareable maid detail link with visible update status, verified fields, and a clear interview action. All content is synthetic.</p>
+    </div>
+    <div class="profile-layout">
+      <article class="profile-sheet">
+        <span class="profile-code">SUN-PH-2601 · synthetic record</span>
+        <h2>Mara</h2>
+        <p class="section-intro">31 · Philippines · single · available for interview. Profile reviewed by staff after helper self-update form.</p>
+        <div class="profile-facts">
+          <div class="fact"><small>Last updated</small><b>2026-07-06 09:20</b></div>
+          <div class="fact"><small>Review status</small><b>Staff checked</b></div>
+          <div class="fact"><small>Best fit</small><b>Newborn + cooking</b></div>
+          <div class="fact"><small>Share link</small><b>/helper/SUN-PH-2601</b></div>
+        </div>
+        <div class="cta"><a class="btn jade" href="#/contact">Request interview</a><a class="btn light" href="#/search">Back to search</a></div>
+      </article>
+      <div class="timeline" aria-label="Profile update and interview timeline">
+        <div class="timeline-step"><div class="num">1</div><article class="panel"><h3>Helper updates form</h3><p>Helper submits new experience, availability, video note, and preferred duties. No public change yet.</p></article></div>
+        <div class="timeline-step"><div class="num">2</div><article class="panel"><h3>Staff reviews fields</h3><p>Agency checks dates, availability, and key claims before the live profile changes.</p></article></div>
+        <div class="timeline-step"><div class="num">3</div><article class="panel"><h3>Client link updates automatically</h3><p>The family sees the latest profile and does not need a replacement PDF in WhatsApp.</p></article></div>
+        <div class="timeline-step"><div class="num">4</div><article class="panel"><h3>Interview request creates next step</h3><p>Staff confirms time, language, video/phone preference, and documents needed.</p></article></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="owner" class="section reveal" aria-labelledby="owner-title">
+    <div class="section-head">
+      <div><div class="kicker">Owner/admin story</div><h2 id="owner-title">The business looks premium because the back office looks organized.</h2></div>
+      <p>Frank’s wife/site owner should feel this understands her real operation: around 50 helpers, fast mobile search, fewer outdated PDF arguments, and a future path to CRM replacement without forcing it now.</p>
+    </div>
+    <div class="owner-story">
+      <article class="admin-card">
+        <h3>Mobile search app feeling</h3>
+        <p>Use the phone visual to show the client a practical future: clients shortlist, share and request interviews quickly, while staff remains in control.</p>
+        <img src="assets/app-search.webp" alt="Synthetic phone mockup showing a helper search interface over Hong Kong skyline">
+      </article>
+      <article class="admin-card">
+        <h3>Self-update → staff review → live link</h3>
+        <div class="admin-flow">
+          <div class="admin-row"><div class="num">1</div><div><b>Helper self-fill form</b><small>Availability, skills, work preference, video note.</small></div></div>
+          <div class="admin-row"><div class="num">2</div><div><b>Staff review queue</b><small>Approve, correct, translate, or hold for call-back.</small></div></div>
+          <div class="admin-row"><div class="num">3</div><div><b>Public profile updates</b><small>Share link changes once, everywhere.</small></div></div>
+          <div class="admin-row"><div class="num">4</div><div><b>Employer interview request</b><small>Creates a clear task for staff follow-up.</small></div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="map" class="section reveal" aria-labelledby="map-title">
+    <div class="section-head">
+      <div><div class="kicker">Full GoldenWin-like hierarchy preserved</div><h2 id="map-title">Everything exists, but the first impression stays calm.</h2></div>
+      <p>The original feature map is not removed; it is staged elegantly so visitors do not feel dumped into a legacy portal.</p>
+    </div>
+    <div class="map-grid" aria-label="Full platform map">
+      <div class="route-card highlight"><span>01</span><b>Home</b><small>Trust-first concierge homepage.</small></div>
+      <div class="route-card highlight"><span>02</span><b>Search</b><small>Need-based helper matching.</small></div>
+      <div class="route-card"><span>03</span><b>About</b><small>Founder promise, branch and agency story.</small></div>
+      <div class="route-card"><span>04</span><b>Services</b><small>Overseas, direct hire, renewal, documents.</small></div>
+      <div class="route-card"><span>05</span><b>Price</b><small>Packages, renewal, direct-hire fees.</small></div>
+      <div class="route-card"><span>06</span><b>Form</b><small>Downloads, holidays, labour references.</small></div>
+      <div class="route-card"><span>07</span><b>Online Service</b><small>Renewal and upload flow.</small></div>
+      <div class="route-card"><span>08</span><b>Favorites</b><small>Shortlist and compare helpers.</small></div>
+      <div class="route-card highlight"><span>09</span><b>Helper Detail</b><small>Shareable live profile link.</small></div>
+      <div class="route-card"><span>10</span><b>Payment</b><small>FPS/ATM/payment receipt flow.</small></div>
+      <div class="route-card"><span>11</span><b>Account</b><small>Employer info and contract records.</small></div>
+      <div class="route-card"><span>12</span><b>Progress</b><small>Application timeline and status.</small></div>
+      <div class="route-card highlight"><span>13</span><b>Interviews</b><small>Request, confirm and follow up.</small></div>
+      <div class="route-card"><span>14</span><b>Privacy</b><small>Noindex demo legal placeholder.</small></div>
+      <div class="route-card"><span>15</span><b>Terms</b><small>Terms and service conditions.</small></div>
+      <div class="route-card"><span>16</span><b>Sign in / Sign up</b><small>Static auth mock only.</small></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section reveal" aria-labelledby="contact-title">
+    <div class="cta-band">
+      <div>
+        <div class="kicker">CTA/contact concept</div>
+        <h2 id="contact-title">Ready to request an interview?</h2>
+        <p class="section-intro">The CTA uses service language: tell us your need, share a profile, and let staff confirm the right next step. This feels safer than a generic “submit” or ecommerce-like checkout.</p>
+        <div class="cta"><button class="btn jade" type="button">Request guided interview</button><button class="btn light" type="button">Send profile to family</button></div>
+      </div>
+      <div class="contact-card" aria-label="Contact summary">
+        <div class="row"><span>Demo status</span><b>Static prototype</b></div>
+        <div class="row"><span>Data</span><b>Synthetic only</b></div>
+        <div class="row"><span>Best mobile action</span><b>Search → Profile → Interview</b></div>
+        <div class="row"><span>Future backend</span><b>CRM / live helper admin</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes" class="fineprint" aria-label="Safety notes">
+    <p><b>Private preview notes:</b> no GoldenWin/Sunny proprietary code, logo, images or real helper records are used; no real helper records appear. Existing visuals are commercial-safe synthetic placeholders generated for this repo. This is a static counter-copy prototype for design direction only, with no real forms, no payment, no account login and no backend submission.</p>
+    <p>Hard-to-discover pattern preserved: random repo/folder path, no hub links, root decoy page, robots disallow and noindex/nofollow/noarchive meta tag.</p>
+  </section>
+</main>
 <script>
-const routes=[['index','Home'],['search','Search'],['about','About'],['services','Services'],['price','Price'],['form','Form'],['onlinerenew','Online Service'],['favorites','My Favorite'],['detail','Helper Detail'],['payment','Payment'],['person','Account'],['processdetail','Progress Detail'],['interviews','Interviews'],['termPersonal','Privacy'],['termCondition','Terms'],['signin','Sign In'],['signup','Sign Up']];
-const navCore=['index','search','about','services','price','form','onlinerenew','favorites','interviews','signin'];
-const nav=document.getElementById('nav'),view=document.getElementById('view'),crumb=document.getElementById('crumb');
-nav.innerHTML=navCore.map((r,i)=>`<a href="#/${r}" data-r="${r}">${routes.find(x=>x[0]==r)[1]} <span>${String(i+1).padStart(2,'0')}</span></a>`).join('');
-const helpers=[
-  ['Ava','GW-PH-2401','28','Single','Cooking · newborn care','Available'],['Mika','GW-PH-2402','34','Married','Elderly care · cleaning','Available'],['Rhea','GW-PH-2403','31','Single','Child care · groceries','Reserved'],['Lina','GW-PH-2404','26','Single','Pets · cooking','Available'],['Joy','GW-PH-2405','39','Married','Toddler care · ironing','Available'],['Belle','GW-PH-2406','30','Single','Household · car wash','Interview']
-];
-function page(){let hash=(location.hash||'#/index').replace('#/','').split('/')[0]||'index'; if(!routes.some(r=>r[0]===hash)) hash='index'; document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active',a.dataset.r===hash)); crumb.textContent=(routes.find(r=>r[0]===hash)||['','Preview'])[1]+' · Private demo'; view.innerHTML=render(hash); bind(hash)}
-function hero(){return `<section class="hero"><div><div class="eyebrow">Employment agency platform rebuild</div><h1>Hire with <span class="gold">clarity, trust & speed.</span></h1><p class="lead">A premium counter-copy concept for the Golden Win site hierarchy: search helpers, review profiles, manage favorites, renew contracts, pay, track progress and book interviews — redesigned as a modern service platform.</p><div class="cta"><a class="btn" href="#/search">Open Search Prototype</a><a class="btn light" href="#/about">View Full Hierarchy</a></div></div>${phone()}</section>`}
-function phone(){return `<div class="hero-card"><div class="phone"><div class="screen"><div class="mock-top"><span>Golden Win</span><span>EN / 繁</span></div><div class="mock-search"><b>Today's New Applicants</b><p style="color:#756d61;margin:7px 0 0">Search by care need, age, zodiac and availability.</p><div class="mock-filters"><span class="chip">Newborn</span><span class="chip">Cooking</span><span class="chip">Age 25–35</span><span class="chip">Available</span></div></div><div class="maid-list">${helpers.slice(0,3).map(h=>`<div class="maid-card"><div class="avatar">${h[0][0]}</div><div><span class="status">${h[5]}</span><b>${h[0]} · ${h[2]}</b><p>${h[1]}<br>${h[4]}</p></div></div>`).join('')}</div></div></div></div>`}
-function filters(){return `<div class="form-row"><div class="field"><label>First Need</label><select><option>New Born</option><option>Child Care</option><option>Elderly Care</option></select></div><div class="field"><label>Second Need</label><select><option>Cooking</option><option>Cleaning</option><option>Groceries</option></select></div><div class="field"><label>Zodiac</label><select><option>No Preference</option><option>Rabbit</option><option>Dragon</option></select></div><div class="field"><label>Search Code</label><input value="GW-PH-" /></div></div>`}
-function cards(){return `<div class="cards">${helpers.map((h,i)=>`<article class="profile"><div class="profile-art">${h[0][0]}</div><div class="profile-body"><span class="status">${h[5]}</span><h3>${h[0]} · ${h[2]}</h3><p>${h[1]} · ${h[3]}</p><div class="meta"><span>${h[4].split(' · ')[0]}</span><span>${h[4].split(' · ')[1]||'Household'}</span><span>Video</span></div><a class="btn light" href="#/detail/${h[1]}">View profile</a></div></article>`).join('')}</div>`}
-function render(r){
- if(r==='index') return hero();
- if(r==='search') return `<div class="section-title"><h2>Search helpers</h2><p>Hierarchy mirrors the original search page: top video/reminder area, filters, today's applicants, cards, favorites and detail entry.</p></div>${filters()}${cards()}`;
- if(r==='about') return `<div class="section-title"><h2>About & locations</h2><p>Premium storytelling page for mission, founder message, branch network and contact touchpoints.</p></div><div class="grid"><div class="panel"><span class="label">Mission</span><h3>Support Hong Kong families</h3><p>Position Golden Win as a guided employment and HR support partner for busy families with newborn, child and elderly care needs.</p></div><div class="panel"><span class="label">Founder</span><h3>Jenny's service promise</h3><p>Warm CEO note, trust-first messaging and practical support throughout the helper journey.</p></div><div class="panel"><span class="label">Branches</span><h3>Multi-location access</h3><p>Tuen Mun, Tai Po, Tin Shui Wai, Shau Kei Wan, Kwun Tong, Tsim Sha Tsui, Cheung Sha Wan, Wan Chai.</p></div></div><br><div class="map"><span class="branch b1">Tuen Mun</span><span class="branch b2">Tai Po</span><span class="branch b3">Wan Chai</span><span class="branch b4">TST</span></div>`;
- if(r==='services') return `<div class="section-title"><h2>Services</h2><p>Rebuilt service hierarchy: overseas hire, direct hire, renewal, documentation, airport pickup, HKID, medical and follow-up support.</p></div><div class="grid">${['Overseas Helper Matching','Direct Hire Handling','Contract Renewal','Visa & Documents','Arrival Support','2-Year Follow Up'].map((x,i)=>`<div class="panel"><span class="label">0${i+1}</span><h3>${x}</h3><p>Concise service card with process explanation, CTA and required documents.</p></div>`).join('')}</div>`;
- if(r==='price') return `<div class="section-title"><h2>Price list</h2><p>Cleaner comparison of package types, VIP replacement terms and renewal/direct-hire options.</p></div><table class="table"><tr><th>Package</th><th>Use case</th><th>Included</th><th>Concept price</th></tr><tr><td>Overseas</td><td>First-time / ex-Asia helper</td><td>Visa, flight, arrival support</td><td><b>HKD 12,800+</b></td></tr><tr><td>Direct Hire</td><td>Employer has target helper</td><td>Documents + process management</td><td><b>HKD 6,980+</b></td></tr><tr><td>Renewal</td><td>Same or new helper renewal</td><td>Contract + consulate handling</td><td><b>HKD 2,980+</b></td></tr></table><div class="notice">Demo prices are placeholder only. Real quote data should be confirmed by client.</div>`;
- if(r==='form') return `<div class="section-title"><h2>Form downloads</h2><p>Original hierarchy includes statutory holidays, immigration forms, labour calculation and insurance brochure.</p></div><div class="grid">${['Statutory Holidays HK','Application Form','ID407E Termination','ID988A Visa Extension','Labour Calculation','Insurance Brochure'].map(x=>`<div class="panel"><span class="label">PDF</span><h3>${x}</h3><p>Download card with short explanation and language badge.</p><button class="btn light">Download</button></div>`).join('')}</div>`;
- if(r==='onlinerenew') return `<div class="section-title"><h2>Online service / renew</h2><p>Step flow for uploading helper/employer info, choosing service, payment and document submission.</p></div><div class="grid"><div class="panel"><h3>Service selection</h3><p>Renew online, renew at branch, direct hire finish contract, direct hire overseas.</p></div><div class="panel"><h3>Upload information</h3><p>Helper name, salary, start date, employer HKID, branch, household details, main duties.</p></div><div class="panel"><h3>Payment + send file</h3><p>ATM, FPS or online payment followed by receipts and document upload.</p></div></div>`;
- if(r==='favorites') return `<div class="section-title"><h2>My favorite</h2><p>Saved helper shortlist and interview booking CTA.</p></div>${cards()}`;
- if(r==='detail') return `<div class="section-title"><h2>Helper detail</h2><p>Profile hierarchy: portfolio, age, birthday, zodiac, marital status, religion, experience, language, YouTube interview, PDF export and WhatsApp share.</p></div><div class="grid"><div class="panel"><span class="label">Portfolio</span><h3>Ava · GW-PH-2401</h3><p>Age 28 · Single · Christian · Available</p><ul><li>Newborn care</li><li>Cooking</li><li>Household chores</li></ul></div><div class="panel"><span class="label">Experience</span><h3>Overseas & work record</h3><p>Structured table area for overseas experience, previous duties, language level and family background.</p></div><div class="panel"><span class="label">Actions</span><h3>Share / print / PDF</h3><p>Buttons for favorite, WhatsApp share, Facebook share, print and PDF export.</p><a class="btn" href="#/interviews">Book interview</a></div></div>`;
- if(r==='payment') return `<div class="section-title"><h2>Payment</h2><p>Static view of the payment hierarchy: category selection, order summary, FPS/ATM instructions and receipt upload.</p></div><div class="grid"><div class="panel"><h3>Category</h3><p>New customer / replacement / direct hire / renewal.</p></div><div class="panel"><h3>FPS / ATM</h3><p>Bank/FPS instruction block with upload receipt field.</p></div><div class="panel"><h3>Confirmation</h3><p>Success message, next-step WhatsApp CTA, email receipt.</p></div></div>`;
- if(r==='person') return `<div class="section-title"><h2>Account</h2><p>Employer profile, contracts, orders and progress records.</p></div><table class="table"><tr><th>Area</th><th>Fields</th><th>Status</th></tr><tr><td>Employer info</td><td>Name, mobile, HKID, address</td><td>Editable</td></tr><tr><td>Contracts</td><td>Period, helper, renewal date</td><td>Trackable</td></tr><tr><td>Orders</td><td>Payment, receipt, operation</td><td>Linked</td></tr></table>`;
- if(r==='processdetail') return `<div class="section-title"><h2>Progress detail</h2><p>Application progress for overseas workers in Hong Kong and Philippines.</p></div><div class="timeline">${['Contract signed','Documents received','Consulate notarization','Visa application','Flight arrival','HKID + medical check','Follow-up support'].map((x,i)=>`<div class="step"><div class="num">${i+1}</div><div class="panel"><h3>${x}</h3><p>Estimated date, days left and staff note area.</p></div></div>`).join('')}</div>`;
- if(r==='interviews') return `<div class="section-title"><h2>Interviews</h2><p>Shortlist helpers, choose date/time and submit appointment request.</p></div><div class="grid"><div class="panel"><h3>Interview list</h3><p>Total selected helpers, helper cards, contact secretary CTA.</p></div><div class="panel"><h3>Appointment form</h3><p>Name, gender, mobile, email, date and preferred time.</p></div><div class="panel"><h3>History</h3><p>Interview date, status, result and confirmation flow.</p></div></div>`;
- if(r==='signin'||r==='signup') return `<div class="section-title"><h2>${r==='signin'?'Sign in':'Sign up'}</h2><p>Static auth mock only — no real login or data submission.</p></div><div class="panel" style="max-width:520px"><div class="field"><label>Mobile</label><input value="+852 " /></div><br><div class="field"><label>Password / OTP</label><input value="••••••" /></div><br><button class="btn">${r==='signin'?'Sign in':'Create account'}</button></div>`;
- return `<div class="section-title"><h2>${routes.find(x=>x[0]===r)[1]}</h2><p>Legal document hierarchy preserved as a placeholder page.</p></div><div class="panel"><h3>Document content area</h3><p>Privacy policy / terms and conditions text would be reviewed and formatted here.</p></div>`;
-}
-function bind(r){}
-addEventListener('hashchange',page); page();
+const routeMap={home:'home',search:'search',detail:'detail',owner:'owner',map:'map',contact:'contact',trust:'trust'};
+const navLinks=[...document.querySelectorAll('[data-route]')];
+function currentRoute(){const raw=(location.hash||'#/home').replace(/^#\/?/,'').split('/')[0]||'home';return routeMap[raw]?raw:'home'}
+function applyRoute(){const route=currentRoute();navLinks.forEach(a=>a.classList.toggle('active',a.dataset.route===route));const target=document.getElementById(routeMap[route]);if(target){setTimeout(()=>target.scrollIntoView({block:'start'}),30)}document.title=(route==='search'?'Live helper search':route==='detail'?'Shareable helper profile':'Sunny Helper Concierge')+' — Private Counter-Copy Preview'}
+const io='IntersectionObserver' in window?new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.12}):null;
+document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('in'));
+window.addEventListener('hashchange',applyRoute);
+window.addEventListener('load',applyRoute);
 </script>
 </body>
 </html>
