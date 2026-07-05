@@ -205,4 +205,52 @@ Applied and locally verified:
 - Local HTTP check returned 200 for the page and the five relevant WebP assets.
 - Secret-like scan found no API key/token/password/user email/phone patterns.
 
-Pending at this report line: push + live GitHub Pages verification.
+Push/live follow-up: the first Pages build for correction commit `223976d` later errored; final live verification is superseded by the watchdog section below.
+
+## Watchdog final live verification — 2026-07-06 02:18 HKT
+
+Safe continuation/verification performed by scheduled watchdog:
+
+- Detected the GitHub Pages build for commit `223976d` had errored after the Traditional Chinese/square-corner correction.
+- Confirmed latest publish commit `ac6e15e` (`chore: publish static preview without jekyll`) added `.nojekyll`; GitHub Pages latest build is `built` for `ac6e15e` with no error message.
+- Live preview verified: HTTP 200, 33,511 bytes, `text/html; charset=utf-8`.
+- Live markers present: `zh-Hant-HK`, `香港`, `外傭`, `僱傭`, `面試`, `預約面試`, `helper-self-update`, `border-radius:0!important`, `@media(max-width:620px)`, `noindex,nofollow,noarchive`.
+- Live root privacy verified: root page HTTP 200, 448 bytes, 404/noindex decoy present, preview slug not exposed.
+- Live `robots.txt` verified: HTTP 200, 26 bytes, `Disallow: /`.
+- Live WebP assets verified HTTP 200:
+  - `agency-consultation.webp`: 66,660 bytes
+  - `helper-ana.webp`: 14,710 bytes
+  - `helper-mara.webp`: 20,550 bytes
+  - `helper-lina.webp`: 27,712 bytes
+  - `helper-rhea.webp`: 29,688 bytes
+- Local static verification: secret/API-key/email pattern scan 0 hits; HK phone-number pattern scan 0 hits; no non-zero `border-radius` declarations found; mobile CSS/reduced-motion markers present.
+- Git: `HEAD` and `origin/main` are `ac6e15e`; tracked preview files clean after verification. Existing untracked sprint/watchdog/audit files were left untouched.
+
+Final caveat remains: static prototype only; no real backend/search submit/payment/account/login/CRM action yet.
+
+## Watchdog recheck — 2026-07-06 03:16 HKT
+
+- Project had no meaningful preview-file activity in the last 25 minutes, but was not stuck: the final Traditional Chinese / no-rounded-corners version is already deployed and complete.
+- Live preview reverified: HTTP 200, 33,511 bytes, `text/html; charset=utf-8`.
+- Live markers still present: `zh-Hant-HK`, `香港`, `外傭`, `僱傭`, `面試`, `預約面試`, `helper-self-update`, `border-radius:0!important`, `@media(max-width:620px)`, `@media(max-width:980px)`, `prefers-reduced-motion`, `noindex,nofollow,noarchive`, and all five professional WebP asset names.
+- Live privacy/assets still verified: root decoy HTTP 200 and does not expose the preview slug; `robots.txt` HTTP 200 with `User-agent: *` / `Disallow: /`; five professional WebP assets HTTP 200.
+- GitHub Pages API: latest build remains `built` for `ac6e15e8de84ed4a189771a58c9bc408034a7367`, no error.
+- Local checks: non-zero `border-radius` declarations 0; secret/API-key/email/HK phone scans 0; root decoy and robots disallow present.
+- No continuation build/push was needed. Existing untracked watchdog/sprint/audit files were left untouched.
+
+
+## Orange/yellow bilingual simplification — 2026-07-06 02:40 CST
+
+User direction: use orange/yellow theme and fix the confusing iPhone arrangement.
+
+Local verification completed before push:
+
+- `orange-yellow bilingual straight-corners` marker present.
+- English headline present: `Find a helper your family can trust.`
+- Traditional Chinese headline present: `找到家人放心的外傭`.
+- Bilingual nav present: `Home／首頁`, `Search／搜尋`.
+- Helper portraits present: Mara, Ana, Lina, Rhea.
+- Dark green variables/classes removed: no `--green`, `#155e54`, `#0f4942`, or `btn green`.
+- No non-zero `border-radius` declarations found.
+- Rough mobile overflow static check: no fixed `width:Npx` over 390px.
+- Local HTTP returned 200 for page and five WebP assets.

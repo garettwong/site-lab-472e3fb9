@@ -77,3 +77,17 @@ Applied:
 - made helper portraits visible in the hero roster, search cards, and detail page;
 - removed visible English UI copy except synthetic helper names/codes;
 - kept noindex/private/synthetic-data safety notes.
+
+
+## Orange/yellow bilingual simplification — 2026-07-06 02:40 CST
+
+User direction: use orange/yellow theme, make the site English + Traditional Chinese, and fix the messy iPhone arrangement.
+
+Applied:
+
+- removed dark-green design language and replaced it with warm orange/yellow accents;
+- kept square/straight-corner rule while reducing heavy borders and dense admin grids;
+- simplified first screen to one promise, one featured helper photo, two CTAs, and three trust points;
+- changed visible UI to bilingual English + Traditional Chinese;
+- moved the full feature map lower as quiet capability coverage instead of noisy cards;
+- kept synthetic helper portraits central in hero, search cards, and live profile.
