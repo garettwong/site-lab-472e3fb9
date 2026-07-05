@@ -135,3 +135,23 @@ Browser screenshot caveat:
 - Static prototype only: no real search backend, form submit, payment, account login, CRM, or interview booking action yet.
 - `#/search` is a client-side hash route; HTTP verification fetches the preview index and checks the route-capable HTML markers.
 - Several local sprint/watchdog/audit files were already untracked or generated during the background sprint and were not committed unless needed for the live preview.
+
+
+## Correction pass — 2026-07-06 01:25 CST
+
+Garett reviewed the first redesigned version and rejected the visual feel as too western fast-food / playful rounded, and asked why more maid/helper images were not generated.
+
+Correction applied:
+
+- Generated 5 additional ImageGen2 assets:
+  - professional HK agency consultation hero image;
+  - 4 synthetic professional helper profile portraits.
+- Replaced CSS-only initials/silhouettes on helper cards with portrait images.
+- Reduced excessive rounded UI from playful pill/card style to sharper 8–14px professional agency UI.
+- Shifted palette away from cream/gold glow toward navy / white / grey / restrained jade.
+- Kept design focused on professional employment-agency trust rather than western casual restaurant feeling.
+
+Verification after correction:
+
+- Local file marker check passed for `agency-consultation.webp`, 4 helper portrait assets, and `Professional correction pass` CSS marker.
+- Awaiting post-push live GitHub Pages verification below.

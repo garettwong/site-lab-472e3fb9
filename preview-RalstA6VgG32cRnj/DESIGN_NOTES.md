@@ -49,3 +49,14 @@ Frank’s wife/site owner needs fast mobile search, shareable live helper links,
 - Helper profiles are synthetic placeholders.
 - Existing image assets in the preview folder are synthetic generated placeholders supplied for this repo.
 - This is a static private noindex prototype: no real login, payment, form submission, or backend action.
+
+
+## Correction pass — 2026-07-06 01:25 CST
+
+Garett pointed out that the previous pass still felt like a western fast-food / playful rounded website, not a professional Hong Kong employment agency. Correction applied:
+
+- generated professional synthetic helper profile portraits and a formal consultation-office hero image;
+- replaced initial/silhouette helper cards with real-looking synthetic portrait photos;
+- reduced excessive border-radius from playful pills/cards into sharper 8–14px professional UI;
+- shifted palette away from cream/gold glow into navy, white, grey, and restrained jade;
+- made the visual tone more document-led, employment-agency, and trust/proof oriented.
