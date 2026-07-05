@@ -91,3 +91,25 @@ Applied:
 - changed visible UI to bilingual English + Traditional Chinese;
 - moved the full feature map lower as quiet capability coverage instead of noisy cards;
 - kept synthetic helper portraits central in hero, search cards, and live profile.
+
+
+## Language toggle + GoldenWin-style headers — 2026-07-06 03:55 CST
+
+User feedback: could not change to English; section headers should follow the GoldenWin homepage.
+
+Fix:
+
+- implemented a real EN / 繁 language switch instead of inline mixed bilingual copy;
+- default remains Traditional Chinese, but EN button switches visible content and document lang/title;
+- changed top section headers toward public GoldenWin homepage business routes: `Hiring a Helper`, `Best Offer`, `Only Renew Online`, `Find Helper`, `Helper Profile`, `Contact Us`;
+- kept orange/yellow theme, straight corners, synthetic helper photos, and no dark green.
+
+Local verification:
+
+- language toggle markers found;
+- 121 EN spans and 121 繁 spans present;
+- mixed nav strings such as `Home／首頁` removed;
+- GoldenWin-style business headers present;
+- no non-zero border-radius declarations;
+- no dark-green variables/classes;
+- local page and all five WebP assets returned HTTP 200.

@@ -254,3 +254,47 @@ Local verification completed before push:
 - No non-zero `border-radius` declarations found.
 - Rough mobile overflow static check: no fixed `width:Npx` over 390px.
 - Local HTTP returned 200 for page and five WebP assets.
+
+## Watchdog live verification — 2026-07-06 03:36 HKT
+
+Safe continuation/verification performed by scheduled watchdog after the orange/yellow bilingual simplification:
+
+- Live preview URL: https://garettwong.github.io/site-lab-472e3fb9/preview-RalstA6VgG32cRnj/#/search
+- Live preview verified: HTTP 200, 26,741 characters, `text/html; charset=utf-8`.
+- Live markers present: `orange-yellow bilingual straight-corners`, `Find a helper your family can trust.`, `找到家人放心的外傭`, `Home／首頁`, `Search／搜尋`, helper portraits/names (`Mara`, `Ana`, `Lina`, `Rhea`), `border-radius:0!important`, `prefers-reduced-motion`, and `noindex,nofollow,noarchive`.
+- Live root privacy verified: root page HTTP 200, 448 bytes, 404/noindex decoy present, preview slug not exposed.
+- Live `robots.txt` verified: HTTP 200, 26 bytes, `User-agent: *` / `Disallow: /`.
+- Live WebP assets verified HTTP 200 with `image/webp`:
+  - `agency-consultation.webp`: 66,660 bytes
+  - `helper-ana.webp`: 14,710 bytes
+  - `helper-mara.webp`: 20,550 bytes
+  - `helper-lina.webp`: 27,712 bytes
+  - `helper-rhea.webp`: 29,688 bytes
+- GitHub Pages latest build is `built` for `495cc47179d02649025c7b33e76e369a1765eecb`, with no error.
+- Git: `HEAD` and `origin/main` are `495cc47179d02649025c7b33e76e369a1765eecb` (`feat: simplify maid demo with orange bilingual mobile flow`).
+- Local checks: non-zero `border-radius` declarations 0; fixed widths over 390px 0; secret/API-key/email pattern scan 0 hits; HK phone-number pattern scan 0 hits. Latest responsive CSS uses 900px/520px breakpoints rather than the earlier 980px/620px markers.
+- Existing untracked sprint/watchdog/audit files were left untouched.
+
+Final caveat remains: static prototype only; no real backend/search submit/payment/account/login/CRM action yet.
+
+
+## Language toggle + GoldenWin-style headers — 2026-07-06 03:55 CST
+
+User feedback: could not change to English; section headers should follow the GoldenWin homepage.
+
+Fix:
+
+- implemented a real EN / 繁 language switch instead of inline mixed bilingual copy;
+- default remains Traditional Chinese, but EN button switches visible content and document lang/title;
+- changed top section headers toward public GoldenWin homepage business routes: `Hiring a Helper`, `Best Offer`, `Only Renew Online`, `Find Helper`, `Helper Profile`, `Contact Us`;
+- kept orange/yellow theme, straight corners, synthetic helper photos, and no dark green.
+
+Local verification:
+
+- language toggle markers found;
+- 121 EN spans and 121 繁 spans present;
+- mixed nav strings such as `Home／首頁` removed;
+- GoldenWin-style business headers present;
+- no non-zero border-radius declarations;
+- no dark-green variables/classes;
+- local page and all five WebP assets returned HTTP 200.
