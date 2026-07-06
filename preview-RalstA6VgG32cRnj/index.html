@@ -156,7 +156,7 @@ function selectedLang(){return document.body.classList.contains('lang-en')?'en':
 function currentRoute(){const raw=(location.hash||'#/home').replace(/^#\/?/,'').split('/')[0]||'home';return routeMap[raw]?raw:'home'}
 function routeOffset(){const header=document.querySelector('.topbar');return (header?header.offsetHeight:0)+10}
 function jumpToTarget(target){const top=Math.max(0,target.getBoundingClientRect().top+window.pageYOffset-routeOffset());window.scrollTo({top,behavior:'auto'})}
-function applyRoute(options={}){const route=currentRoute();navLinks.forEach(a=>a.classList.toggle('active',a.dataset.route===route));const target=document.getElementById(routeMap[route]);if(target&&options.scroll!==false){jumpToTarget(target);setTimeout(()=>jumpToTarget(target),80)}const lang=selectedLang();document.title=(titles[lang][route]||titles[lang].home)+' · Private Preview'}
+function applyRoute(options={}){const route=currentRoute();navLinks.forEach(a=>a.classList.toggle('active',a.dataset.route===route));const target=document.getElementById(routeMap[route]);if(target&&options.scroll!==false){target.classList.add('in');jumpToTarget(target);setTimeout(()=>{target.classList.add('in');jumpToTarget(target)},80)}const lang=selectedLang();document.title=(titles[lang][route]||titles[lang].home)+' · Private Preview'}
 function setLang(lang){
   const next=lang==='en'?'en':'zh';
   document.body.classList.toggle('lang-en',next==='en');
