@@ -178,8 +178,8 @@ langButtons.forEach(btn=>btn.addEventListener('click',()=>setLang(btn.dataset.la
 try{setLang(localStorage.getItem('helperPreviewLang')||'zh')}catch(e){setLang('zh')}
 window.__helperPreviewReady=true;
 setupReveals();
-applyRoute();
-window.addEventListener('hashchange',()=>applyRoute());window.addEventListener('load',()=>applyRoute());
+applyRoute({scroll:false});
+window.addEventListener('hashchange',()=>applyRoute());window.addEventListener('load',()=>applyRoute({scroll:false}));
 </script>
 </body>
 </html>
